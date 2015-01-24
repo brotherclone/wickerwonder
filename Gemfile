@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org' do
-  gem 'rails-assets-semantic'
-end
+source 'https://rails-assets.org'
+
 
 gem 'rails', '4.1.4'
 gem 'rake', '~> 0.9.6'
@@ -26,13 +25,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 
-gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+gem 'sdoc', group: :doc
+gem 'spring', group: :development
 
 group :test do
-  gem 'capybara', '~> 2.1.0'
+  gem 'capybara', '~> 2.2.0'
 end
 
 # Wicker Wonder Modifications
 
 gem 'haml-rails'
+gem 'rails-assets-semantic'

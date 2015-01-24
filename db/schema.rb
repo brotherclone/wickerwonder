@@ -11,6 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150124220652) do
+ActiveRecord::Schema.define(version: 20150124224647) do
+
+  create_table "characters", force: true do |t|
+    t.string   "name"
+    t.string   "shortbio"
+    t.text     "longbio"
+    t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
