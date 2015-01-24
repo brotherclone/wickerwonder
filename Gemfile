@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-semantic'
+end
 
 gem 'rails', '4.1.4'
 gem 'rake', '~> 0.9.6'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'minitest'
+  gem 'rspec-rails'
   gem 'thor'
 end
 
@@ -22,10 +24,15 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+
+
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
+group :test do
+  gem 'capybara', '~> 2.1.0'
+end
 
 # Wicker Wonder Modifications
-gem 'rails-assets-semantic'
+
 gem 'haml-rails'
