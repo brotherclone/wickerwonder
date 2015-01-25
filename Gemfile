@@ -33,7 +33,6 @@ group :test do
 end
 
 # Wicker Wonder Modifications
-
 gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'rails-assets-semantic'
