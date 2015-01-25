@@ -4,7 +4,8 @@ require 'rails_helper'
 RSpec.describe CharactersController, :type => :controller do
 
   let(:valid_attributes) {
-   { "name" => "Senior Testington, Esq."}
+
+    FactoryGirl.attributes_for(:character)
   }
 
   let(:invalid_attributes) {
@@ -14,10 +15,9 @@ RSpec.describe CharactersController, :type => :controller do
   let(:valid_session) { @env }
 
   describe "GET index" do
-    it "assigns all characters as @characters" do
-      character = Character.create! valid_attributes
+    it "show a list of all users" do
       get :index, {}, valid_session
-      expect(assigns(:characters)).to eq([character])
+      expect(response).to be_success
     end
   end
 
@@ -87,7 +87,7 @@ RSpec.describe CharactersController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        FactoryGirl.attributes_for(:character)
       }
 
       it "updates the requested character" do
@@ -95,7 +95,6 @@ RSpec.describe CharactersController, :type => :controller do
         http_login
         put :update, {:id => character.to_param, :character => new_attributes}, valid_session
         character.reload
-        skip("Add assertions for updated state")
       end
 
       it "assigns the requested character as @character" do

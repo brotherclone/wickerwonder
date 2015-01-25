@@ -9,6 +9,8 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'thor'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 # Add support for the MySQL
