@@ -7,6 +7,5 @@ RSpec.describe HomeController, :type => :routing do
       expect(:get => "/").to route_to("home#index")
     end
 
-
   end
 end
