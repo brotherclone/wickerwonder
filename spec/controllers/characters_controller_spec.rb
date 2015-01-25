@@ -16,6 +16,7 @@ RSpec.describe CharactersController, :type => :controller do
 
   describe "GET index" do
     it "show a list of all users" do
+      http_login
       get :index, {}, valid_session
       expect(response).to be_success
     end
@@ -24,6 +25,7 @@ RSpec.describe CharactersController, :type => :controller do
   describe "GET show" do
     it "assigns the requested character as @character" do
       character = Character.create! valid_attributes
+      http_login
       get :show, {:id => character.to_param}, valid_session
       expect(assigns(:character)).to eq(character)
     end

@@ -6,7 +6,7 @@ class CharactersController < ApplicationController
   @u = authy['uname']
   @p = authy['pword']
 
-  http_basic_authenticate_with name: @u, password: @p, except: [:index, :show]
+  http_basic_authenticate_with name: @u, password: @p
 
   public
 

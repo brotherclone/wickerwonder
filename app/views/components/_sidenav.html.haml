@@ -1,0 +1,5 @@
+%div{:class => 'ui right vertical inverted sidebar menu', :id => 'sidenav'}
+  %h3{:class=>'sidebar header'}Meet the characters
+  - @characters.each do |c|
+    %a{:class=>'item'}
+      =c.name
