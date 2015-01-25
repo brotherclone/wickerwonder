@@ -1,0 +1,19 @@
+= form_for @character do |f|
+  - if @character.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@character.errors.count, "error")} prohibited this character from being saved:"
+      %ul
+        - @character.errors.full_messages.each do |msg|
+          %li= msg
+  %p{:class => 'ui form'}
+    = f.label :name
+    = f.text_field :name
+    = f.label :age
+    = f.text_field :age
+    = f.label :shortbio
+    = f.text_area :shortbio, :class => 'tinymce', :rows => 20, :cols => 120
+    = f.label :longbio
+    = f.text_area :longbio, :class => 'tinymce', :rows => 50, :cols => 120
+  .actions
+    = f.submit 'Save', class: 'ui button'
+=tinymce
