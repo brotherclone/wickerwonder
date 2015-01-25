@@ -1,4 +1,15 @@
+require 'yaml'
+
 class CharactersController < ApplicationController
+
+  authy= YAML.load_file('config/auth.yml')
+  @u = authy['uname']
+  @p = authy['pword']
+
+  http_basic_authenticate_with name: @u, password: @p, except: [:index, :show]
+
+  public
+
   before_action :set_character, only: [:show, :edit, :update, :destroy]
 
   # GET /characters
