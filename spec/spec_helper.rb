@@ -5,7 +5,7 @@ RSpec.configure do |config|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
-  config.include AuthRequeHelper, :type => :request
+  config.include AuthRequestHelper, :type => :request
   config.include AuthHelper, :type => :controller
 
   config.mock_with :rspec do |mocks|

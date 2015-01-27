@@ -11,6 +11,9 @@ group :development, :test do
   gem 'thor'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 # Add support for the MySQL
@@ -30,9 +33,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', group: :doc
 gem 'spring', group: :development
 
-group :test do
-  gem 'capybara', '~> 2.2.0'
-end
 
 # Wicker Wonder Modifications
 gem 'haml-rails'
