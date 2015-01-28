@@ -2,7 +2,7 @@
 require 'spec_helper'
 
 
-describe 'Main Navigation is Available' do
+describe 'Side Navigation is Available' do
 
   before (:each) do
     visit root_path
@@ -29,13 +29,12 @@ describe 'Main Navigation is Available' do
 
   it 'checks for a comic button', :js => true do
     click_button('Menu')
-    expect(page).to have_selector('button', :text => 'Get the comic.')
-    expect(page).to have_selector('p', :text => 'it\'s very free.')
+    expect(page).to have_selector('a', :text => 'Get the comic')
   end
 
   it 'checks for a pitch materials', :js => true do
-    expect(page).to have_selector('button', :text => 'Pitch Materials')
-    expect(page).to have_selector('p', :text => 'for your considerations.')
+    click_button('Menu')
+    expect(page).to have_selector('a', :text => 'Pitch materials')
   end
 
 end
