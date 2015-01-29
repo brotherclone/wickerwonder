@@ -1,7 +1,7 @@
 %div{:class => 'ui right vertical inverted sidebar menu', :id => 'sidenav'}
-  %h4{:class=>'sidebar header'}Meet the characters
-  - @characters.each do |c|
-    %a{:class=>'item shoppecharacter'}
-      =c.name
-  %a{:class=>'item'} Get the comic
-  %a{:class=>'item'} Pitch materials
+  -sidenavnames = @longnavigationitems.keys
+  -sidenavnames.each do |sn|
+    =link_to @longnavigationitems[sn.to_sym], root_path(anchor:sn), class:'item'
+    -if sn == :characterarea
+      -@characters.each do |c|
+        =link_to c.name, root_path(anchor:'characters'), class:'item shoppecharacter'

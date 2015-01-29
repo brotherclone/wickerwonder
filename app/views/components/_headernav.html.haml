@@ -1,0 +1,14 @@
+%div{:class=>'ui page grid'}
+  %div{:class=>'row'}
+  %div{:class=>'row'}
+    %div{:class=>'eight wide column'}
+      %a{:href=> root_path, :class=> 'ui medium image'}
+        =image_tag('logo.svg')
+    %div{:class=>'one wide column'}
+    %div{:class=>'six wide column'}
+      %div{:class=>'ui text menu'}
+        -sidenavnames = @shortnavigationitems.keys
+        -sidenavnames.each do |s|
+          =link_to @shortnavigationitems[s.to_sym], root_path(anchor:s), class:'item'
+    %div{:class=>'one wide column'}
+      %button{:class=> 'ui button', :id=>'toggle'} Menu

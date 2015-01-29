@@ -1,2 +1,9 @@
+
 =render partial: 'components/sidenav', locals: {characters: @characters}
-%button{:class=> 'ui button', :id=>'toggle'} Menu
+%div{:class=>'pusher'}
+  =render partial: 'components/headernav'
+  %div{:class=>'vertical field'}
+    -areanames = @shortnavigationitems.keys
+    -areanames.each do |a|
+      %div{:id => a, :class => 'ui segment'}
+        =@shortnavigationitems[a.to_sym]
