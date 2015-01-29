@@ -3,17 +3,6 @@ require 'spec_helper'
 include NavHelper
 
 
-describe 'Main Navigation is Available' do
-
-  it 'checks for main navigation presence' do
-    expect(page).to have_selector('div#main_navigation')
-  end
-
-  it 'checks that links are there and correct' do
-
-  end
-
-end
 
 describe 'Side Navigation is Available' do
 
@@ -35,6 +24,17 @@ describe 'Side Navigation is Available' do
     expect(page).to have_selector('div.dimmed')
     find('div.dimmed').click
     expect(page).not_to have_selector('div.dimmed')
+  end
+
+  it 'checks for main navigation presence' do
+    expect(page).to have_selector('div')
+  end
+
+  it 'checks that links are there and correct' do
+    navnames = NavHelper.short.values
+    navnames.each do |n|
+      expect(page).to have_selector('a.item', :text => n)
+    end
   end
 
 =begin
