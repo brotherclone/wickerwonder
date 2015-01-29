@@ -36,7 +36,7 @@ describe 'Side Navigation is Available' do
     find('div.dimmed').click
     expect(page).not_to have_selector('div.dimmed')
   end
-  
+
 =begin
   it 'checks that the home button is available in the side navigation', :js => true do
     click_button('Menu')
