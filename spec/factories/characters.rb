@@ -1,12 +1,14 @@
 require 'faker'
 
+
 FactoryGirl.define do
-  factory :character do |c|
+  factory :character do
     cname = Faker::Name.first_name + " " + Faker::Name.last_name
-    c.name cname
-    c.age Faker::Number.number(4)
-    c.shortbio Faker::Lorem.sentence(4)
-    c.longbio Faker::Lorem.paragraph(5)
+    name cname
+    age Faker::Number.number(4)
+    shortbio Faker::Lorem.sentence(4)
+    longbio Faker::Lorem.paragraph(5)
+    #ToDo Add Imageable polymorph to factory
   end
 
 end
