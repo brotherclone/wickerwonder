@@ -14,9 +14,17 @@ RSpec.configure do |config|
 
 #data_base cleaner transaction / truncation
   config.before(:suite) do
-    DatabaseCleaner.strategy = :deletion
-    DatabaseCleaner.clean_with(:deletion)
+    if Rails.env.test?
+      DatabaseCleaner.strategy = :deletion
+      DatabaseCleaner.clean_with(:deletion)
+      end
   end
 
-
+  #ToDo config delete
+  config.after(:suite) do
+    if Rails.env.test?
+      #FileUtils.rm_rf(Dir["#{Rails.root}/public/upload/[^.]*"])
+      #FileUtils.rm_rf(Dir["#{temp_path}/[^.]*"])
+    end
+  end
 end

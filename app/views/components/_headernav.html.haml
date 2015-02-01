@@ -6,7 +6,7 @@
         =image_tag('logo.svg')
     %div{:class=>'one wide column'}
     %div{:class=>'six wide column'}
-      %div{:class=>'ui text menu'}
+      %div{:class=>'ui text menu', :id => 'main_navigation'}
         -sidenavnames = @shortnavigationitems.keys
         -sidenavnames.each do |s|
           =link_to @shortnavigationitems[s.to_sym], root_path(anchor:s), class:'item'

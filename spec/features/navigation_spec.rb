@@ -5,6 +5,10 @@ include NavHelper
 
 describe 'Main Navigation is Available' do
 
+  before (:each) do
+    visit root_path
+  end
+
   it 'checks for main navigation presence' do
     expect(page).to have_selector('div#main_navigation')
   end
@@ -15,7 +19,7 @@ describe 'Main Navigation is Available' do
 
 end
 
-describe 'Side Navigation is Available' do
+describe 'Side navigation is available' do
 
   before (:each) do
     visit root_path
@@ -32,9 +36,9 @@ describe 'Side Navigation is Available' do
 
   it 'checks that the dimmer can close the side navigation', :js => true do
     click_button('Menu')
-    expect(page).to have_selector('div.dimmed')
+    expect(page).to have_selector('div.pusher.dimmed')
     find('div.dimmed').click
-    expect(page).not_to have_selector('div.dimmed')
+    expect(page).not_to have_selector('div.pusher.dimmed')
   end
 
 =begin
