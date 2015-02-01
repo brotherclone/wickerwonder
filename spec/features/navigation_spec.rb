@@ -2,6 +2,14 @@ require 'spec_helper'
 
 include NavHelper
 
+describe 'NavHelper is consistent' do
+  it 'checks the Nav Helper short and long form are the same keys' do
+    l = NavHelper.long
+    s = NavHelper.short
+    expect(s.keys).to eq(l.keys)
+  end
+end
+
 
 describe 'Main Navigation is Available' do
 
