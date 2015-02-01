@@ -1,8 +1,8 @@
 =render partial: 'components/sidenav', locals: {characters: @characters}
 %div{:class=>'pusher'}
   =render partial: 'components/headernav'
-  %div{:class=>'vertical field'}
+  %div{:id=>'vertical_field'}
     -areanames = @shortnavigationitems.keys
     -areanames.each do |a|
-      %div{:id => a, :class => 'ui segment'}
+      %div{:id => a, :class => 'ui segment wonder-card',:data=>{:stellar_background_ratio =>'0.5'}, :style=>'background-image: url(http://lorempixel.com/1050/1050)'}
         =@shortnavigationitems[a.to_sym]
