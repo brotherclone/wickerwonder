@@ -22,7 +22,17 @@ describe 'Main Navigation is Available' do
   end
 
   it 'checks that links are there and correct' do
+    l = NavHelper.long.values
+    l.each do |x|
+      expect(page).to have_selector('a.item', :text => x)
+    end
+  end
 
+  it 'checks for page regions with matching anchors to nav' do
+    l = NavHelper.long.keys
+    l.each do |x|
+     find_by_id(x)
+    end
   end
 
 end
@@ -49,31 +59,16 @@ describe 'Side navigation is available' do
     expect(page).not_to have_selector('div.pusher.dimmed')
   end
 
-=begin
-  it 'checks that the home button is available in the side navigation', :js => true do
-    click_button('Menu')
-    expect(page).to have_selector('a.home', :text => 'Home')
-  end
-
-  it 'checks for the character menu header', :js =>true do
-    click_button('Menu')
-    expect(page).to have_selector('h4.header', :text => 'Meet the characters')
+  it 'checks that links are there and correct' do
+    s = NavHelper.short.values
+    s.each do |x|
+      expect(page).to have_selector('a.item', :text => x)
+    end
   end
 
   it 'makes sure there are less than 20 Characters in the nav', :js => true do
     click_button('Menu')
     expect(page).to have_selector('a.shoppecharacter', :between => 1..20)
   end
-
-  it 'checks for a comic button', :js => true do
-    click_button('Menu')
-    expect(page).to have_selector('a', :text => 'Get the comic')
-  end
-
-  it 'checks for a pitch materials', :js => true do
-    click_button('Menu')
-    expect(page).to have_selector('a', :text => 'Pitch materials')
-  end
-=end
 
 end
