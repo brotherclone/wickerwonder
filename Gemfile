@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
+# Wicker Wonder Modifications
 source 'https://rails-assets.org'
-
 
 gem 'rails', '4.1.4'
 gem 'rake', '~> 0.9.6'
@@ -9,6 +9,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'thor'
+  # Wicker Wonder Modifications
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'database_cleaner'
@@ -38,3 +39,4 @@ gem 'spring', group: :development
 gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'rails-assets-semantic'
+gem 'carrierwave'

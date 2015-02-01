@@ -30,12 +30,11 @@ describe 'Main Navigation is Available' do
 
   it 'checks for page regions with matching anchors to nav' do
     l = NavHelper.long.keys
-    l.each do |x|
-     find_by_id(x)
+      l.each do |x|
+        find_by_id(x)
+      end
     end
   end
-
-end
 
 describe 'Side navigation is available' do
 
@@ -69,6 +68,5 @@ describe 'Side navigation is available' do
   it 'makes sure there are less than 20 Characters in the nav', :js => true do
     click_button('Menu')
     expect(page).to have_selector('a.shoppecharacter', :between => 1..20)
+    end
   end
-
-end

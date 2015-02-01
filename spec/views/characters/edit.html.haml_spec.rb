@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "characters/edit", :type => :view do
   before(:each) do
-    @character = assign(:character, Character.create!({"name" => "Testington"}))
+    @character = FactoryGirl.create(:character)
   end
 
   it "renders the edit character form" do

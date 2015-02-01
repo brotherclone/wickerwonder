@@ -18,7 +18,7 @@ RSpec.configure do |config|
       DatabaseCleaner.strategy = :deletion
       DatabaseCleaner.clean_with(:deletion)
       end
-  end
+    end
 
   #ToDo config delete
   config.after(:suite) do
