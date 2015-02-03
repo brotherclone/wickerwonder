@@ -17,13 +17,14 @@ RSpec.configure do |config|
     if Rails.env.test?
       DatabaseCleaner.strategy = :deletion
       DatabaseCleaner.clean_with(:deletion)
+      end
     end
-  end
-  config.after(:all) do
+
+  #ToDo config delete
+  config.after(:suite) do
     if Rails.env.test?
-      FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/uploads"])
+      #FileUtils.rm_rf(Dir["#{Rails.root}/public/upload/[^.]*"])
+      #FileUtils.rm_rf(Dir["#{temp_path}/[^.]*"])
     end
   end
-
-
 end

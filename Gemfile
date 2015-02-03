@@ -38,5 +38,9 @@ gem 'spring', group: :development
 # Wicker Wonder Modifications
 gem 'haml-rails'
 gem 'tinymce-rails'
-gem 'rails-assets-semantic'
 gem 'carrierwave'
+
+
+gem 'rails-assets-semantic'
+gem 'rails-assets-stellar'
+gem 'rails-assets-jquery-smooth-scroll'
