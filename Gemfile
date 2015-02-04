@@ -39,7 +39,12 @@ gem 'spring', group: :development
 gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'carrierwave'
-
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
+gem 'omniauth-twitter'
+gem 'omniauth-github'
 
 gem 'rails-assets-semantic'
 gem 'rails-assets-stellar'
