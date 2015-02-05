@@ -1,3 +1,3 @@
 $ ->
   $('#toggle').click ->
-    $('#sidenav').sidebar('toggle');
+    $('#sidenav').sidebar('toggle')

@@ -5,4 +5,8 @@
     -areanames = @shortnavigationitems.keys
     -areanames.each do |a|
       %div{:id => a, :class => 'ui segment wonder-card',:data=>{:stellar_background_ratio =>'0.5'}, :style=>'background-image: url(http://lorempixel.com/1050/1050)'}
-        =@shortnavigationitems[a.to_sym]
+        -#ToDo switch to case
+        -if(a==:characterarea)
+          =render partial: 'home/cards/'+a.to_s, locals:{characters: @characters}
+        -else
+          =render partial: 'home/cards/'+a.to_s
