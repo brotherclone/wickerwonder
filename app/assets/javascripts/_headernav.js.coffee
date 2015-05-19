@@ -1,2 +1,0 @@
-$ ->
-  $('#mainnav').sticky({context: '#stickygaurd'})

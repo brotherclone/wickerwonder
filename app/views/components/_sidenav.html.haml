@@ -1,7 +1,0 @@
-%div{:class => 'ui right vertical inverted sidebar menu', :id => 'sidenav'}
-  -sidenavnames = @longnavigationitems.keys
-  -sidenavnames.each do |sn|
-    =link_to @longnavigationitems[sn.to_sym], root_path(anchor:sn), class:'item'
-    -if sn == :characterarea
-      -@characters.each do |c|
-        =link_to c.name, root_path(anchor:'characters'), class:'item shoppecharacter'
