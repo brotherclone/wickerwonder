@@ -19,7 +19,6 @@ gem 'rails_12factor', group: :production
 gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'carrierwave'
-
 gem 'rails-assets-semantic'
 gem 'rails-assets-stellar'
 gem 'rails-assets-jquery-smooth-scroll'

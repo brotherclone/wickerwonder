@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require semantic
+//= require tinymce-jquery
+//= require stellar
+//= require jquery-smooth-scroll
 //= require_tree .

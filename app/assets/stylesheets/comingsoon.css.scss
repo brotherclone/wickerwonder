@@ -1,0 +1,22 @@
+.coming.soon{
+  height: 100%;
+  width: 100%;
+  background-image: image-url("trigod.png");
+}
+
+.wicker{
+  background-image: image-url("wicker_large.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-height: 768px;
+  height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title{
+  position: fixed;
+  top: 50%;
+}
