@@ -1,3 +1,12 @@
 $sans: "futura-pt-condensed",sans-serif;
 $serif: "ltc-bodoni-175",serif;
 
+
+@mixin presenter($sz: 18px, $col: black){
+  line-height: $sz;
+  letter-spacing: 4px;
+  font-family: $serif;
+  font-size: $sz;
+  text-align: center;
+  color: $col;
+}

@@ -1,7 +1,7 @@
 class MaterialsController < ApplicationController
   http_basic_authenticate_with name: "gabe", password: "poopington"
   before_action :set_material, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @materials = Material.all
   end

@@ -8,3 +8,9 @@
   @include tri-bg();
   height: 100%;
 }
+
+.wckr.welcome.graph{
+  p {
+    @include presenter(75px, $nearblack);
+  }
+}
