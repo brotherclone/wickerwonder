@@ -1,0 +1,8 @@
+
+@mixin bg($i){
+  background-image: image-url($i);
+}
+
+@mixin tri-bg(){
+ @include bg('trigod.png');
+}

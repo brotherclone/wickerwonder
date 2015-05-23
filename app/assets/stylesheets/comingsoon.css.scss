@@ -1,11 +1,12 @@
 @import "typography";
 @import "palette";
 @import "effects";
+@import "textures";
 
 .coming.soon{
   height: 100%;
   width: 100%;
-  background-image: image-url("trigod.png");
+  @include tri-bg();
 }
 
 .wicker{
@@ -29,10 +30,11 @@
 
 .title{
   position: relative;
-  @include text-shadow(null);
+  @include text-shadow();
   top: 50%;
   font-family: $sans;
   font-weight: 400;
   font-size: 80px;
   color: $white;
+  left: -2%;
 }
