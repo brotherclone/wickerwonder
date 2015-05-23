@@ -1,21 +1,21 @@
-= render :partial => 'components/menubutton'
 .ui.sidebar
   = render :partial => 'components/menu'
-.pusher
+.pusher.wckr.bg
+  = render :partial => 'components/menubutton'
   .ui.vertical.segment
     .ui.page.grid
       .segment
-        %p Welcome Area
+        = render :partial => 'components/welcome'
       .divider
       .segment
-        %p Meet the Characters
+        = render :partial => 'components/characters'
       .divider
       .segment
-        %p Situations
+        = render :partial => 'components/situations'
       .divider
       .segment
-        %p Closing/Contact
+        = render :partial => 'components/closer'
       .divider
       .segment
-        %p Materials
+        = render :partial => 'components/materials'
       .divider

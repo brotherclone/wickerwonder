@@ -1,31 +1,22 @@
 class CharactersController < ApplicationController
+  http_basic_authenticate_with name: "gabe", password: "poopington"
   before_action :set_character, only: [:show, :edit, :update, :destroy]
-
-  # GET /characters
-  # GET /characters.json
   def index
     @characters = Character.all
   end
 
-  # GET /characters/1
-  # GET /characters/1.json
   def show
   end
 
-  # GET /characters/new
   def new
     @character = Character.new
   end
 
-  # GET /characters/1/edit
   def edit
   end
 
-  # POST /characters
-  # POST /characters.json
   def create
     @character = Character.new(character_params)
-
     respond_to do |format|
       if @character.save
         format.html { redirect_to @character, notice: 'Character was successfully created.' }
@@ -37,8 +28,6 @@ class CharactersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /characters/1
-  # PATCH/PUT /characters/1.json
   def update
     respond_to do |format|
       if @character.update(character_params)
@@ -51,8 +40,6 @@ class CharactersController < ApplicationController
     end
   end
 
-  # DELETE /characters/1
-  # DELETE /characters/1.json
   def destroy
     @character.destroy
     respond_to do |format|
@@ -62,12 +49,10 @@ class CharactersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_character
       @character = Character.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def character_params
       params.require(:character).permit(:name, :age, :bio, :occupation, :species, :status, :animatedimg, :portriatimg)
     end

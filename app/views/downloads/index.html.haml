@@ -1,0 +1,19 @@
+%h1 Listing downloads
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @downloads.each do |download|
+      %tr
+        %td= link_to 'Show', download
+        %td= link_to 'Edit', edit_download_path(download)
+        %td= link_to 'Destroy', download, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Download', new_download_path

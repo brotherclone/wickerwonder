@@ -1,0 +1,10 @@
+= form_for @download do |f|
+  - if @download.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@download.errors.count, "error")} prohibited this download from being saved:"
+      %ul
+        - @download.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

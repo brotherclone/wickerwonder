@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :situations
+
+  resources :materials
+
+  resources :downloads
+
   resources :characters
 
   get 'soon', to:'comingsoon#index'

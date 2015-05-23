@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522180022) do
+ActiveRecord::Schema.define(version: 20150523144454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,33 @@ ActiveRecord::Schema.define(version: 20150522180022) do
     t.string   "name"
     t.string   "animatedimg"
     t.string   "portraitimg"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "downloads", force: true do |t|
+    t.integer  "material_id"
+    t.string   "file"
+    t.text     "description"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "downloads", ["material_id"], name: "index_downloads_on_material_id", using: :btree
+
+  create_table "materials", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "situations", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "situationimg"
+    t.string   "situationthumbnail"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

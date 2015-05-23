@@ -1,0 +1,19 @@
+%h1 Listing situations
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @situations.each do |situation|
+      %tr
+        %td= link_to 'Show', situation
+        %td= link_to 'Edit', edit_situation_path(situation)
+        %td= link_to 'Destroy', situation, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Situation', new_situation_path
