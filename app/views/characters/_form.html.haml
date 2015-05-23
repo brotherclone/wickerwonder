@@ -22,6 +22,7 @@
     = f.text_field :portraitimg
     = f.label :bio
     = f.text_area :bio, :class => 'tinymce', :rows => 20, :cols => 120
-    .actions
-      = f.submit 'Save', class: 'ui button'
+    .ui.grid
+      .right.floated.right.aligned.three.wide.column
+        = f.submit 'Save', class: 'ui basic button'
 =tinymce

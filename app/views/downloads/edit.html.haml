@@ -1,7 +1,10 @@
-%h1 Editing download
-
-= render 'form'
-
-= link_to 'Show', @download
-\|
-= link_to 'Back', downloads_path
+.ui.grid
+  .twelve.wide.column.centered
+    %h1
+      Editing
+      =@download.name
+    .ui.divider
+    = render 'form'
+    .ui.divider
+    = link_to 'Show', @download, class:'ui basic button green'
+    = link_to 'Back', downloads_path, class:'ui basic button'

@@ -4,5 +4,23 @@
 @import "textures";
 
 h1,h2,h3,h4,h5{
+  font-family: $sans;
+}
+
+html,body,p{
   font-family: $serif;
+}
+
+.ui.button{
+  font-family: $serif !important;
+}
+
+a{
+  color: inherit;
+  &:hover{
+    color: $blue;
+  }
+  &:visited{
+    color: inherit;
+  }
 }

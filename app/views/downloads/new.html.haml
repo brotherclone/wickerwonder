@@ -1,5 +1,7 @@
-%h1 New download
-
-= render 'form'
-
-= link_to 'Back', downloads_path
+.ui.grid
+  .twelve.wide.column.centered
+    %h1 New downloads
+    .ui.divider
+    = render 'form'
+    .ui.divider
+    = link_to 'Back', downloads_path, class: 'ui green basic button'
