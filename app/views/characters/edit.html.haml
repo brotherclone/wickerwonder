@@ -1,7 +1,10 @@
-%h1 Editing character
-
-= render 'form'
-
-= link_to 'Show', @character
-\|
-= link_to 'Back', characters_path
+.ui.grid
+  .twelve.wide.column.centered
+    %h1
+      Editing
+      =@character.name
+    .ui.divider
+    = render 'form'
+    .ui.divider
+    = link_to 'Show', @character, class:'ui basic button green'
+    = link_to 'Back', characters_path, class:'ui basic button'

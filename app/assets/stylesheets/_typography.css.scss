@@ -10,3 +10,24 @@ $serif: "ltc-bodoni-175",serif;
   text-align: center;
   color: $col;
 }
+
+@mixin labeling ($sz: 20px, $col: black, $bg: white){
+  font-size: $sz;
+  color: $col;
+  font-family: serif;
+  background-color: $bg;
+  line-height: $sz;
+}
+
+@mixin reading($sz:24px, $col:black){
+  line-height: $sz;
+  font-family: $sans;
+  font-size: $sz;
+  color: $col;
+}
+
+@mixin character-name(){
+  font-family: $serif;
+  text-decoration: underline;
+  font-size: 4em;
+}

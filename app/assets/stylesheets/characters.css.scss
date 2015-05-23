@@ -1,3 +1,30 @@
-// Place all the styles related to the Characters controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "typography";
+@import "palette";
+
+.wckr.character.name{
+  @include character-name();
+  padding: 20px 0px 20px 10px;
+}
+
+.wckr.character.pairing{
+  margin-left: 10px;
+  span{
+    @include labeling(20px,$darkergrey,transparent);
+  }
+  span:nth-of-type(1){
+    font-weight: 900;
+    @include labeling(20px,$nearblack,transparent);
+  }
+  img{
+    max-height: 500px;
+    display: block;
+  }
+}
+.wckr.character.biography{
+  margin-top: 10px;
+  @include reading(22px,$darkgrey);
+  pre{
+    @include reading(22px,$darkgrey);
+    background-color: transparent;
+  }
+}

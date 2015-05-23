@@ -1,6 +1,38 @@
 %p#notice= notice
-
-
-= link_to 'Edit', edit_character_path(@character)
-\|
-= link_to 'Back', characters_path
+.wckr.character.name
+  =@character.name
+.ui.divider
+.ui.grid
+  .ui.three.wide.column
+    .wckr.character.pairing
+      %span Age:
+      %span
+        =@character.age
+    .wckr.character.pairing
+      %span Species:
+      %span
+        =@character.species
+    .wckr.character.pairing
+      %span Occupation:
+      %span
+        =@character.occupation
+    .wckr.character.pairing
+      %span Status:
+      %span
+        =@character.status
+  .ui.five.wide.column
+    .wckr.character.pairing
+      %span Bio:
+      .wckr.character.biography
+        =@character.bio.html_safe
+  .ui.three.wide.column
+    .wckr.character.pairing
+      %span Animated Image:
+      %img{:src=> image_path('characters/'+@character.animatedimg)}
+  .ui.three.wide.column
+    .wckr.character.pairing
+      %span Portrait Image:
+      %img{:src=> image_path(@character.portraitimg)}
+.ui.divider
+= link_to 'Edit', edit_character_path(@character), class: 'ui red basic button'
+= link_to 'Back', characters_path, class: 'ui green basic button'

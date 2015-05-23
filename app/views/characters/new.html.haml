@@ -1,5 +1,7 @@
-%h1 New character
-
-= render 'form'
-
-= link_to 'Back', characters_path
+.ui.grid
+  .twelve.wide.column.centered
+    %h1 New character
+    .ui.divider
+    = render 'form'
+    .ui.divider
+    = link_to 'Back', characters_path, class: 'ui green basic button'
