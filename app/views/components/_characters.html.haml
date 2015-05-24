@@ -1,0 +1,10 @@
+%h1 Characters
+.meet-the-characters
+- @characters.each do |c|
+  .meet-the-character
+    =c.name
+    =c.status
+    =c.occupation
+    =c.age
+    =c.species
+    =c.bio.html_safe

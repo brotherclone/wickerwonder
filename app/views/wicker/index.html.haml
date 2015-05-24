@@ -8,18 +8,10 @@
     %i{:class=>'content icon'}
   .ui.vertical.segment{:id=>'main'}
     .ui.page.grid
-      .segment
-        = render :partial => 'components/welcome'
-      .divider
-      .segment
-        = render :partial => 'components/characters'
-      .divider
-      .segment
-        = render :partial => 'components/situations'
-      .divider
-      .segment
-        = render :partial => 'components/closer'
-      .divider
-      .segment
-        = render :partial => 'components/materials'
-      .divider
+      //= render :partial => 'components/welcome'
+      .ui.centered.row
+        .ui.twelve.wide.column
+          = render :partial => 'components/characters', :locals => {:characters => @characters}
+      = render :partial => 'components/situations'
+      = render :partial => 'components/closer'
+      = render :partial => 'components/materials'
