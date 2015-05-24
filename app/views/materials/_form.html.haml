@@ -5,6 +5,12 @@
       %ul
         - @material.errors.full_messages.each do |msg|
           %li= msg
-
-  .actions
-    = f.submit 'Save'
+  %p{:class => 'ui form'}
+    = f.label :name
+    = f.text_field :name
+    = f.label :description
+    = f.text_area :description, :class => 'tinymce', :rows => 20, :cols => 120
+    .ui.grid
+      .right.floated.right.aligned.three.wide.column
+        = f.submit 'Save', class: 'ui basic button'
+=tinymce

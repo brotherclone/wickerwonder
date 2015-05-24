@@ -1,7 +1,10 @@
-%h1 Editing material
-
-= render 'form'
-
-= link_to 'Show', @material
-\|
-= link_to 'Back', materials_path
+.ui.grid
+  .twelve.wide.column.centered
+    %h1
+      Editing
+      =@material.name
+    .ui.divider
+    = render 'form'
+    .ui.divider
+    = link_to 'Show', @material, class:'ui basic button green'
+    = link_to 'Back', materials_path, class:'ui basic button'

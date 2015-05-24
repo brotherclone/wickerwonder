@@ -1,7 +1,11 @@
-.ui.sidebar
-  = render :partial => 'components/menu'
+.ui.left.vertical.inverted.labeled.icon.sidebar.menu{:id => 'sidenav'}
+  %a{:class=>'item'}
+    %i{:class=>'home icon'}
+    Home
 .pusher.wckr.bg
-  = render :partial => 'components/menubutton'
+  .wckr.navigtation.trigger
+  .ui.black.right.attached.fixed.icon.button{:id=>'trigger'}
+    %i{:class=>'content icon'}
   .ui.vertical.segment{:id=>'main'}
     .ui.page.grid
       .segment

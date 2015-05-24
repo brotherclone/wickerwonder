@@ -1,5 +1,7 @@
-%h1 New material
-
-= render 'form'
-
-= link_to 'Back', materials_path
+.ui.grid
+  .twelve.wide.column.centered
+    %h1 New material
+    .ui.divider
+    = render 'form'
+    .ui.divider
+    = link_to 'Back', materials_path, class: 'ui green basic button'

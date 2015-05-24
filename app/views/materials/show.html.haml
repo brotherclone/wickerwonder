@@ -1,6 +1,15 @@
 %p#notice= notice
-
-
-= link_to 'Edit', edit_material_path(@material)
-\|
-= link_to 'Back', materials_path
+.ui.divider
+.ui.grid
+  .ui.three.wide.column
+    .ui.row
+      %strong Name:
+      %span
+        =@material.name
+    .ui.row
+      %strong Description:
+      %div
+        =@material.description.html_safe
+.ui.divider
+= link_to 'Edit', edit_material_path(@material), class: 'ui red basic button'
+= link_to 'Back', materials_path, class: 'ui green basic button'

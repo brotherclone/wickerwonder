@@ -17,4 +17,5 @@
 //= require tinymce-jquery
 //= require stellar
 //= require jquery-smooth-scroll
+//= require slick.js
 //= require_tree .

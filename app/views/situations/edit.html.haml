@@ -1,7 +1,10 @@
-%h1 Editing situation
-
-= render 'form'
-
-= link_to 'Show', @situation
-\|
-= link_to 'Back', situations_path
+.ui.grid
+  .twelve.wide.column.centered
+    %h1
+      Editing
+      =@situation.name
+    .ui.divider
+    = render 'form'
+    .ui.divider
+    = link_to 'Show', @situation, class:'ui basic button green'
+    = link_to 'Back', situations_path, class:'ui basic button'
