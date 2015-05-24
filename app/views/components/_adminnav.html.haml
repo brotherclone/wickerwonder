@@ -1,8 +1,11 @@
 -navitemclasses = {:characters => 'item', :situations => 'item', :materials => 'item', :downloads => 'item'}
 -navitemclasses[current.to_sym] = 'item active'
 .ui.grid
-  .right.floated.six.wide.column
+  .right.floated.eight.wide.column
     .ui.text.menu
+      .header.item
+        %a{:class=>'item', :href=>root_path}
+          %i{:class=> 'home icon'}
       .header.item
         Manage:
       %a{:class=> navitemclasses[:characters], :href=> characters_path}

@@ -1,0 +1,8 @@
+%h1{:id=>'wicker_materials'} Materials
+- @materials.each do |m|
+  =m.name
+  =m.description.html_safe
+  -@downloads.each do |d|
+    -if(d.material_id==m.id)
+      %a{:href=> d.link}
+        = d.file

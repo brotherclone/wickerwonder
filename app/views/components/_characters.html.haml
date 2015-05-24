@@ -1,10 +1,12 @@
-%h1 Characters
+%h1{:id=>'wicker_character'} Meet the Characters
 .meet-the-characters
-- @characters.each do |c|
-  .meet-the-character
-    =c.name
-    =c.status
-    =c.occupation
-    =c.age
-    =c.species
-    =c.bio.html_safe
+  - @characters.each do |c|
+    .meet-the-character
+      =c.name
+      =c.status
+      =c.occupation
+      =c.age
+      =c.species
+      =c.bio.html_safe
+      %img{:src=>image_path('characters/'+c.animatedimg)}
+      %img{:src=>image_path('characters/'+c.portraitimg)}
