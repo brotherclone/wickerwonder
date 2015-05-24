@@ -1,8 +1,12 @@
 = render :partial => '/components/adminnav', :locals => { :current => 'downloads' }
 %p#notice= notice
-%h3
-  For
-  =@download.material_id
-%a{:href=>@download.link} @download.file
-= link_to 'Edit', edit_downloads_path(@download), class: 'ui red basic button'
+- m = Material.find(@download.material_id)
+%strong
+  For:
+%span
+  =m.name
+%div
+  %a{:href=>@download.link}
+    =@download.file
+= link_to 'Edit', edit_download_path(@download), class: 'ui red basic button'
 = link_to 'Back', downloads_path, class: 'ui green basic button'

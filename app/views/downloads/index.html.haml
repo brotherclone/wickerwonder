@@ -19,7 +19,7 @@
           %tr
             %td= d.file
             %td= link_to 'Show', d
-            %td{:class=>'warning'}= link_to 'Edit', edit_downloads_path(d)
+            %td{:class=>'warning'}= link_to 'Edit', edit_download_path(d)
             %td{:class=>'error'}= link_to 'Destroy', d, :method => :delete, :data => { :confirm => 'Are you sure?' }
     .ui.divider
     = link_to 'New Download', new_download_path, class: 'ui orange basic button'

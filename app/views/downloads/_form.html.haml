@@ -11,7 +11,7 @@
     = f.label :link
     = f.text_field :link
     = f.label :material_id
-    = f.select(:material_id, Material.all, :prompt=>true)
+    = f.select(:material_id, Material.all.collect{|m| [m.name, m.id]})
     = f.label :description
     = f.text_area :description, :class => 'tinymce', :rows => 10, :cols => 120
     .ui.grid
