@@ -5,6 +5,16 @@
       %ul
         - @situation.errors.full_messages.each do |msg|
           %li= msg
-
-  .actions
-    = f.submit 'Save'
+  %p{:class => 'ui form'}
+    = f.label :name
+    = f.text_field :name
+    = f.label :situationimg
+    = f.text_field :situationimg
+    = f.label :situationthumbnail
+    = f.text_field :situationthumbnail
+    = f.label :description
+    = f.text_area :description, :class => 'tinymce', :rows => 40, :cols => 120
+    .ui.grid
+      .right.floated.right.aligned.three.wide.column
+        = f.submit 'Save', class: 'ui basic button'
+=tinymce

@@ -1,3 +1,4 @@
+= render :partial => '/components/adminnav', :locals => { :current => 'characters' }
 %p#notice= notice
 .wckr.character.name
   =@character.name
@@ -32,7 +33,7 @@
   .ui.three.wide.column
     .wckr.character.pairing
       %span Portrait Image:
-      %img{:src=> image_path(@character.portraitimg)}
+      %img{:src=> image_path('characters/'+@character.portraitimg)}
 .ui.divider
 = link_to 'Edit', edit_character_path(@character), class: 'ui red basic button'
 = link_to 'Back', characters_path, class: 'ui green basic button'

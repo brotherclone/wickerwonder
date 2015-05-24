@@ -1,0 +1,16 @@
+-navitemclasses = {:characters => 'item', :situations => 'item', :materials => 'item', :downloads => 'item'}
+-navitemclasses[current.to_sym] = 'item active'
+.ui.grid
+  .right.floated.six.wide.column
+    .ui.text.menu
+      .header.item
+        Manage:
+      %a{:class=> navitemclasses[:characters], :href=> characters_path}
+        Characters
+      %a{:class=> navitemclasses[:situations], :href=> situations_path}
+        Situations
+      %a{:class=> navitemclasses[:materials], :href=> materials_path}
+        Materials
+      %a{:class=> navitemclasses[:downloads], :href=> downloads_path}
+        Downloads
+.ui.divider

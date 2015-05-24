@@ -1,5 +1,8 @@
-%h1 New situation
-
-= render 'form'
-
-= link_to 'Back', situations_path
+= render :partial => '/components/adminnav', :locals => { :current => 'situations' }
+.ui.grid
+  .twelve.wide.column.centered
+    %h1 New Situations
+    .ui.divider
+    = render 'form'
+    .ui.divider
+    = link_to 'Back', situations_path, class: 'ui green basic button'

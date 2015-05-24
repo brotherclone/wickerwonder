@@ -1,19 +1,26 @@
-%h1 Listing situations
+= render :partial => '/components/adminnav', :locals => { :current => 'situations' }
+.ui.grid
+  .twelve.wide.column.centered
+    %h1 Wicker Wonder Situations
+    .ui.divider
+    %table{:class=> 'ui table'}
+      %thead
+        %tr
+          %th
+            Material
+          %th
+            Show
+          %th
+            Edit
+          %th
+            Delete
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @situations.each do |situation|
-      %tr
-        %td= link_to 'Show', situation
-        %td= link_to 'Edit', edit_situation_path(situation)
-        %td= link_to 'Destroy', situation, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Situation', new_situation_path
+      %tbody
+        - @situations.each do |situation|
+          %tr
+            %td= situation.name
+            %td= link_to 'Show', situation
+            %td{:class=>'warning'}= link_to 'Edit', edit_situation_path(situation)
+            %td{:class=>'error'}= link_to 'Destroy', situation, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    .ui.divider
+    = link_to 'New Situation', new_situation_path, class: 'ui orange basic button'
