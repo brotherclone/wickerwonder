@@ -16,7 +16,4 @@ gem 'rails_12factor', group: :production
 # Wicker Wonder Modifications
 gem 'haml-rails'
 gem 'tinymce-rails'
-gem 'rails-assets-slick.js'
 gem 'rails-assets-semantic'
-gem 'rails-assets-stellar'
-gem 'rails-assets-jquery-smooth-scroll'
