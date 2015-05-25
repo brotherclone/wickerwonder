@@ -5,9 +5,15 @@
 
 
 .wckr.welcome.graph{
+  background-color: pink;
+  transition: all 0.5s linear 0s;
   p {
     @include presenter(75px, $nearblack);
   }
+}
+
+.wckr.welcome.graph.spotlight{
+  background-color: green;
 }
 
 
