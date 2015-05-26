@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require semantic
 //= require tinymce-jquery
+//= require slick.js
 //= require_tree .

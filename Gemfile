@@ -1,7 +1,7 @@
 ruby '2.1.2'
 source 'https://rubygems.org'
-# Wicker Wonder Modifications
 source 'https://rails-assets.org'
+
 gem 'rails', '4.1.8'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -10,12 +10,32 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
-gem 'rails_12factor', group: :production
-# Wicker Wonder Modifications
+
 gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'rails-assets-semantic'
-gem 'rspec-rails', group: :test
-gem 'minitest', group: :test
+gem 'rails-assets-slick.js'
+
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'thor'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'table_print'
+end
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
+end
+
+group :development do
+  gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
+end

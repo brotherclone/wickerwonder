@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class SituationTest < ActiveSupport::TestCase
-  # test "the truth" do
+  # spec "the truth" do
   #   assert true
   # end
 end

@@ -1,0 +1,2 @@
+$ ->
+  $('.meet-the-characters').slick()

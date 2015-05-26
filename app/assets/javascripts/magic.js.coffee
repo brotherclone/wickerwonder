@@ -1,11 +1,9 @@
 $ ->
+  navitems = ['welcome','characters','situations','info','materials']
   wickerMagic = new ScrollMagic.Controller()
-#  onEnter = ->
-#    $('#big_wicker').removeClass('shrunk')
-#  onLeave = ->
-#    $('#big_wicker').addClass('shrunk')
-#  new ScrollMagic.Scene({
-#    triggerElement: '#weclome_1',
-#    duration: 400
-#    offset: 150
-#  }).on('enter',onEnter).on('leave', onLeave).addTo(wickerMagic)
+  i = 0
+  while i < navitems.length
+    trignm = '#wicker_' + navitems[i]
+    navnm = '#wicker_' + navitems[i] + '_nav'
+    new (ScrollMagic.Scene)(triggerElement: trignm, offset: 10).setClassToggle(navnm, 'active').addIndicators().addTo wickerMagic
+    i++

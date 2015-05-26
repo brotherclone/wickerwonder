@@ -1,0 +1,2 @@
+$ ->
+  $('.see-situations').slick();
