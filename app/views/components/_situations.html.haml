@@ -1,8 +1,11 @@
-%h1{:id=>'wicker_situations'} The World of Wicker Wonder
-.see-situations
-  - @situations.each do |s|
-    .see-situation
-      =s.name
-      =s.description.html_safe
-      %img{:src=>image_path('characters/'+s.situationimg)}
-      %img{:src=>image_path('characters/'+s.situationthumbnail)}
+.ui.inverted.green.vertical.segment{:id=>'wicker_welcome'}
+  .ui.page.grid
+    .column
+      %h1{:id=>'wicker_situations'} The World of Wicker Wonder
+      .see-situations
+        - @situations.each do |s|
+          .see-situation
+            =s.name
+            =s.description.html_safe
+            %img{:src=>image_path('characters/'+s.situationimg)}
+            %img{:src=>image_path('characters/'+s.situationthumbnail)}

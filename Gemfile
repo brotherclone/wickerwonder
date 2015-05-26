@@ -17,3 +17,5 @@ gem 'rails_12factor', group: :production
 gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'rails-assets-semantic'
+gem 'rspec-rails', group: :test
+gem 'minitest', group: :test

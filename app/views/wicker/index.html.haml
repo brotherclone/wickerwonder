@@ -11,22 +11,10 @@
     Download Materials
 .pusher
   .wckr.navigtation.trigger
-  .ui.black.right.attached.fixed.icon.button{:id=>'trigger'}
+  .ui.black.right.icon.button{:id=>'trigger'}
     %i{:class=>'content icon'}
-  .ui.vertical.segment{:id=>'main'}
-    .ui.page.grid
-      .ui.centered.row
-        .ui.sixteen.wide.column
-          = render :partial => 'components/welcome'
-      .ui.centered.row
-        .ui.twelve.wide.column
-          = render :partial => 'components/characters', :locals => {:characters => @characters}
-      .ui.centered.row
-        .ui.twelve.wide.column
-          = render :partial => 'components/situations', :locals => {:situations => @situations}
-      .ui.centered.row
-        .ui.twelve.wide.column
-          = render :partial => 'components/closer'
-      .ui.centered.row
-        .ui.twelve.wide.column
-          = render :partial => 'components/materials', :locals => {:downloads => @downloads, :materials => @materials}
+  = render :partial => 'components/welcome'
+  = render :partial => 'components/characters', :locals => {:characters => @characters}
+  = render :partial => 'components/situations', :locals => {:situations => @situations}
+  = render :partial => 'components/closer'
+  = render :partial => 'components/materials', :locals => {:downloads => @downloads, :materials => @materials}
