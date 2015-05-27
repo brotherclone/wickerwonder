@@ -1,5 +1,7 @@
 @import "typography";
 @import "palette";
+@import "textures";
+@import "effects";
 
 .wckr.character.name{
   @include character-name();
@@ -29,10 +31,26 @@
   }
 }
 
-.meet-the-characters{
+.wckr.strata.heading-title{
+  @include wicker-segment-headings();
+}
 
+.meet-the-characters{
+  min-height: 500px;
+  @include box-shadow(-1px 5px 10px transparentize($grey, 0.75));
+  @include tri-bg();
+  .character-title{
+    font-family: $serif;
+    color:$nearblack;
+    font-weight: 400;
+    font-size: 70px;
+    text-align: right;
+    margin-right: 50px;
+    margin-top: 50px;
+  }
 }
 
 .meet-the-character{
+
 
 }

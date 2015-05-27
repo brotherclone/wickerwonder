@@ -1,4 +1,3 @@
-
 @mixin text-shadow($s: 0 5px 3px rgba(0, 0, 0, 0.25)){
   text-shadow: $s;
 }
@@ -9,13 +8,11 @@
   box-shadow:         $s;
 }
 
-
 @mixin drop-shadow ($x: 0, $y: 1px, $blur: 2px, $spr:  0px,$a: 0.25) {
   -webkit-box-shadow:	$x $y $blur $spr rgba(0, 0, 0, $a);
   -moz-box-shadow:	$x $y $blur $spr rgba(0, 0, 0, $a);
   box-shadow:		$x $y $blur $spr rgba(0, 0, 0, $a);
 }
-
 
 @mixin gradient ($startColor: #eee, $endColor: white) {
   background-color: $startColor;
@@ -43,7 +40,6 @@
   background-image: -ms-linear-gradient(left, $startColor, $endColor);
   background-image: -o-linear-gradient(left, $startColor, $endColor);
 }
-
 
 @mixin inner-shadow ($x: 0, $y: 1px, $blur: 2px, $spread: 0, $alpha: 0.25) {
   -webkit-box-shadow: inset $x $y $blur $spread rgba(0, 0, 0, $alpha);

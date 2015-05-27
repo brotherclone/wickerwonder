@@ -1,3 +1,9 @@
+@import "palette";
+@import "typography";
+@import "effects";
+@import "textures";
+
+
 #trigger{
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
@@ -5,6 +11,8 @@
 
 #sidenav{
   .item.active{
-    background-color: pink;
+    @include gradient($darkgrey, lighten($darkgrey, 8%));
+    color: $white
   }
+  background-color: $nearblack;
 }

@@ -1,15 +1,17 @@
-.ui.inverted.yellow.vertical.segment{:id=>'wicker_characters'}
+.ui.vertical.segment{:id=>'wicker_characters'}
   .ui.page.grid
     .column
-      %h1{:id=>'wicker_character'} Meet the Characters
+      %h1{:class=>'wckr strata heading-title'} Meet the Characters
       .meet-the-characters
         - @characters.each do |c|
           .meet-the-character
-            =c.name
-            =c.status
-            =c.occupation
-            =c.age
-            =c.species
-            =c.bio.html_safe
-            %img{:src=>image_path('characters/'+c.animatedimg)}
-            %img{:src=>image_path('characters/'+c.portraitimg)}
+            .character-title
+              =c.name
+            -#=c.status
+            -#=c.occupation
+            -#=c.age
+            -#=c.species
+            -#=c.bio.html_safe
+            .character.portrait
+              %img{:src=>image_path('characters/'+c.animatedimg)}
+            -#%img{:src=>image_path('characters/'+c.portraitimg)}
