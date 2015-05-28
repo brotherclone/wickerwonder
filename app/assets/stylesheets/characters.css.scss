@@ -39,18 +39,43 @@
   min-height: 500px;
   @include box-shadow(-1px 5px 10px transparentize($grey, 0.75));
   @include tri-bg();
-  .character-title{
-    font-family: $serif;
-    color:$nearblack;
-    font-weight: 400;
-    font-size: 70px;
-    text-align: right;
-    margin-right: 50px;
-    margin-top: 50px;
+  .character-info{
+    float:right;
+    max-width: 675px;
+    margin-right: 40px;
+    .character-title{
+      font-family: $serif;
+      color:$nearblack;
+      font-weight: 400;
+      font-size: 100px;
+      margin-top: 50px;
+      margin-left: -25px;
+    }
+    .character-bio{
+      font-size:20px;
+      margin-top: 15px;
+      max-width: 640px;
+      max-height: 400px;
+      p:not(:first-child){
+        margin-top: -20px;
+      }
+    }
+    .character-pair-group{
+      font-size:30px;
+      .character-pair{
+        span:nth-child(1){
+          font-weight: 900;
+          margin-right: 5px;
+        }
+      }
+    }
+    .character-pair-group.left, .character-pair-group.right{
+      max-width: 49%;
+      display: inline-block;
+      margin-top: -15px;
+    }
+    .character-pair-group.right{
+      margin-left: 20%;
+    }
   }
-}
-
-.meet-the-character{
-
-
 }

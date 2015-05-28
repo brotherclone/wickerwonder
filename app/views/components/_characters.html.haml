@@ -5,13 +5,28 @@
       .meet-the-characters
         - @characters.each do |c|
           .meet-the-character
-            .character-title
-              =c.name
-            -#=c.status
-            -#=c.occupation
-            -#=c.age
-            -#=c.species
-            -#=c.bio.html_safe
+            .character-info
+              .character-title
+                =c.name
+              .character-pair-group.left
+                .character-pair
+                  %span Species:
+                  %span
+                    =c.species
+                .character-pair
+                  %span Occupation:
+                  %span
+                    =c.occupation
+              .character-pair-group.right
+                .character-pair
+                  %span Age:
+                  %span
+                    =c.age
+                .character-pair
+                  %span Status:
+                  %span
+                    =c.status
+              .character-bio
+                =c.bio.html_safe
             .character.portrait
               %img{:src=>image_path('characters/'+c.animatedimg)}
-            -#%img{:src=>image_path('characters/'+c.portraitimg)}
