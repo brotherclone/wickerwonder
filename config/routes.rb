@@ -16,5 +16,4 @@ Rails.application.routes.draw do
     root 'wicker#index'
   end
 
-
 end
