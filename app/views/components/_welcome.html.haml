@@ -1,6 +1,15 @@
 .ui.inverted.teal.vertical.segment{:id=>'wicker_welcome'}
   .ui.page.grid
     .column
-      %p Testings
-
+      %img{:src=>image_path('logo.svg'), :class=>'wckr welcome-logo'}
+      .wckr.welcome.subtitle Transdimensional Barber
+      .wckr.welcome.msg
+        %p
+          Thanks for stopping by. Wicker Wonder is a concept for a animated series by
+          %span{:itemscope => true, :itemtype =>'http://schema.org/Person'}
+            %span{:itemprop => 'givenName'}
+              Gabriel
+            %span{:itemprop => 'familyName'}
+              Walsh
+          \.
 

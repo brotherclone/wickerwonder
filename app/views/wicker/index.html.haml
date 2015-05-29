@@ -13,8 +13,8 @@
   .wckr.navigtation.trigger
   .ui.black.right.icon.button{:id=>'trigger'}
     %i{:class=>'content icon'}
-  //= render :partial => 'components/welcome'
+  = render :partial => 'components/welcome'
   = render :partial => 'components/characters', :locals => {:characters => @characters}
-  //= render :partial => 'components/situations', :locals => {:situations => @situations}
-  //= render :partial => 'components/closer'
-  //= render :partial => 'components/materials', :locals => {:downloads => @downloads, :materials => @materials}
+  = render :partial => 'components/situations', :locals => {:situations => @situations}
+  = render :partial => 'components/closer'
+  = render :partial => 'components/materials', :locals => {:downloads => @downloads, :materials => @materials}
