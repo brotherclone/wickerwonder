@@ -30,10 +30,6 @@
     .wckr.character.pairing
       %span Animated Image:
       %img{:src=> image_path('characters/'+@character.animatedimg)}
-  .ui.three.wide.column
-    .wckr.character.pairing
-      %span Portrait Image:
-      %img{:src=> image_path('characters/'+@character.portraitimg)}
 .ui.divider
 = link_to 'Edit', edit_character_path(@character), class: 'ui red basic button'
 = link_to 'Back', characters_path, class: 'ui green basic button'

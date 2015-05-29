@@ -15,9 +15,6 @@
   .ui.three.wide.column
     %strong Situation Image:
     %img{:src=> image_path('situations/'+@situation.situationimg)}
-  .ui.three.wide.column
-    %strong Thumbnail Image:
-    %img{:src=> image_path('situations/'+@situation.situationthumbnail)}
 .ui.divider
 = link_to 'Edit', edit_situation_path(@situation), class: 'ui red basic button'
 = link_to 'Back', situations_path, class: 'ui green basic button'
