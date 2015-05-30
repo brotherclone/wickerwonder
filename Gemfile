@@ -15,7 +15,7 @@ gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'rails-assets-semantic'
 gem 'rails-assets-slick.js'
-
+gem 'yaml_db', github: 'jetthoughts/yaml_db'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -39,3 +39,4 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
