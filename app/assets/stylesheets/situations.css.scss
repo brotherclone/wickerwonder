@@ -1,3 +1,28 @@
-// Place all the styles related to the Situations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "semantiglobalcoverides";
+@import "typography";
+@import "palette";
+@import "effects";
+@import "textures";
+
+
+.wckr.situations.heading-title{
+  position: absolute;
+  @media (max-width:$tiny-mobile-max) {
+    @include wicker-segment-headings(40px, -1px 3px 6px rgba(180, 180, 180, .60), $red);
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    @include wicker-segment-headings(50px, -1px 4px 5px rgba(180, 180, 180, .50), $red);
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @include wicker-segment-headings(60px, -1px 4px 5px rgba(180, 180, 180, .50), $red);
+  }
+  @media (min-width: $computer-min) {
+    @include wicker-segment-headings();
+  }
+}
+
+.bleedy{
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,9 +1,3 @@
-GIT
-  remote: git://github.com/jetthoughts/yaml_db.git
-  revision: 5f73cbd14adee939adf08574ec3bf6e05ee55889
-  specs:
-    yaml_db (0.2.3)
-
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -214,4 +208,3 @@ DEPENDENCIES
   tinymce-rails
   turbolinks
   uglifier (>= 1.3.0)
-  yaml_db!

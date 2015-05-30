@@ -2,6 +2,7 @@
 @import "palette";
 @import "textures";
 @import "effects";
+@import "semantiglobalcoverides";
 
 .wckr.character.name{
   @include character-name();
@@ -9,12 +10,11 @@
 }
 
 .wckr.character.pairing{
-  margin-left: 10px;
+
   span{
     @include labeling(20px,$darkergrey,transparent);
   }
   span:nth-of-type(1){
-    font-weight: 900;
     @include labeling(20px,$nearblack,transparent);
   }
   img{
@@ -23,7 +23,6 @@
   }
 }
 .wckr.character.biography{
-  margin-top: 10px;
   @include reading(22px,$darkgrey);
   pre{
     @include reading(22px,$darkgrey);
@@ -32,50 +31,233 @@
 }
 
 .wckr.strata.heading-title{
-  @include wicker-segment-headings();
+  @media (max-width:$tiny-mobile-max) {
+    @include wicker-segment-headings(40px, -1px 3px 6px rgba(180, 180, 180, .60), $white);
+    margin-bottom: 20px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    @include wicker-segment-headings(50px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @include wicker-segment-headings(60px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
+  }
+  @media (min-width: $computer-min) {
+    @include wicker-segment-headings();
+  }
 }
 
 .meet-the-characters{
-  min-height: 500px;
   @include box-shadow(-1px 5px 10px transparentize($grey, 0.75));
   @include tri-bg();
-  .character-info{
-    float:right;
-    max-width: 675px;
-    margin-right: 40px;
-    .character-title{
-      font-family: $serif;
-      color:$nearblack;
-      font-weight: 400;
-      font-size: 100px;
-      margin-top: 50px;
-      margin-left: -25px;
+  @media (max-width:$tiny-mobile-max) {
+    img{
+      max-height: 260px;
+      margin-left: 10%;
     }
-    .character-bio{
-      font-size:20px;
-      margin-top: 15px;
-      max-width: 640px;
-      max-height: 400px;
-      p:not(:first-child){
-        margin-top: -20px;
+    .character-info{
+      float: right;
+      max-width: 50%;
+      margin-right: 5%;
+      margin-top: 10%;
+      hr{
+        display: none;
+      }
+      .character-title{
+        font-family: $serif;
+        color:$nearblack;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+      }
+      .character-bio{
+        display: none;
+      }
+      .character-pair-group{
+        display: none;
       }
     }
-    .character-pair-group{
-      font-size:30px;
-      .character-pair{
-        span:nth-child(1){
-          font-weight: 900;
-          margin-right: 5px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    img{
+      max-height: 280px;
+      margin-left: 8%;
+    }
+    .character-info{
+      float: right;
+      max-width: 60%;
+      margin-right: 5%;
+      margin-top: 5%;
+      hr{
+        display: none;
+      }
+      .character-title{
+        font-family: $serif;
+        color:$nearblack;
+        font-weight: 400;
+        font-size: 40px;
+        text-align: center;
+      }
+      .character-bio{
+        font-size:18px;
+        clear:both;
+        text-align: justify;
+      }
+      .character-pair-group{
+        display: none;
+      }
+    }
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    img{
+      max-height: 320px;
+      margin-left: 10%;
+    }
+    .character-info{
+      float: right;
+      max-width: 60%;
+      margin-right: 10%;
+      margin-top: 2%;
+      hr{
+        clear: both;
+        display: block;
+        @include drop-shadow();
+        margin: 10px 0px 10px 0px;
+      }
+      .character-title{
+        font-family: $serif;
+        color:$nearblack;
+        font-weight: 400;
+        font-size: 50px;
+        text-align: center;
+      }
+      .character-bio{
+        font-size:20px;
+        margin-top: 14px;
+        clear:both;
+        text-align: justify;
+        p:not(:first-child){
+          margin-top: -20px;
         }
       }
+      .character-pair-group{
+        .character-pair{
+          span:nth-child(1){
+            font-weight: 900;
+          }
+        }
+      }
+      .character-pair-group.left, .character-pair-group.right{
+        font-size: 15px;
+      }
+      .character-pair-group.left{
+        float: left;
+        width: 65%;
+      }
+      .character-pair-group.right{
+        display: inline-block;
+      }
     }
-    .character-pair-group.left, .character-pair-group.right{
-      max-width: 49%;
-      display: inline-block;
-      margin-top: -15px;
+  }
+  @media (min-width: $computer-min) and (max-width: $computer-max) {
+    img{
+      max-height: 380px;
+      margin-left: 8%;
     }
-    .character-pair-group.right{
-      margin-left: 20%;
+    .character-info{
+      float: right;
+      max-width: 60%;
+      margin-right: 10%;
+      margin-top: 5%;
+      hr{
+        clear: both;
+        display: block;
+        @include drop-shadow();
+        margin: 10px 0px 10px 0px;
+      }
+      .character-title{
+        font-family: $serif;
+        color:$nearblack;
+        font-weight: 400;
+        font-size: 60px;
+        text-align: center;
+      }
+      .character-bio{
+        font-size:20px;
+        margin-top: 14px;
+        clear:both;
+        text-align: justify;
+        p:not(:first-child){
+          margin-top: -20px;
+        }
+      }
+      .character-pair-group{
+        .character-pair{
+          span:nth-child(1){
+            font-weight: 900;
+          }
+        }
+      }
+      .character-pair-group.left, .character-pair-group.right{
+        font-size: 15px;
+      }
+      .character-pair-group.left{
+        float: left;
+        width: 65%;
+      }
+      .character-pair-group.right{
+        display: inline-block;
+      }
+    }
+  }
+  @media (min-width: $large-monitor-min) {
+    img{
+      max-height: 440px;
+      margin-left: 10%;
+    }
+    .character-info{
+      float: right;
+      max-width: 60%;
+      margin-right: 10%;
+      margin-top: 5%;
+      hr{
+        clear: both;
+        display: block;
+        @include drop-shadow();
+        margin: 10px 0px 10px 0px;
+      }
+      .character-title{
+        font-family: $serif;
+        color:$nearblack;
+        font-weight: 400;
+        font-size: 80px;//
+        text-align: center;
+      }
+      .character-bio{
+        font-size:20px;
+        margin-top: 15px;
+        clear:both;
+        text-align: justify;
+        p:not(:first-child){
+          margin-top: -20px;
+        }
+      }
+      .character-pair-group{
+        .character-pair{
+          span:nth-child(1){
+            font-weight: 900;
+          }
+        }
+      }
+      .character-pair-group.left, .character-pair-group.right{
+        font-size: 18px;
+      }
+      .character-pair-group.left{
+        float: left;
+        width: 65%;
+      }
+      .character-pair-group.right{
+        display: inline-block;
+      }
     }
   }
 }
