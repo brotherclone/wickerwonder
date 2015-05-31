@@ -36,7 +36,7 @@ $serif: "ltc-bodoni-175",serif;
 
 @mixin wicker-segment-headings($s:80px,$sh:-1px 3px 5px rgba(180, 180, 180, .75),$c:$white){
   text-align: center;
-  font-family: $serif;
+  font-family: $sans;
   font-size: $s;
   color: $c;
   @include text-shadow($sh);

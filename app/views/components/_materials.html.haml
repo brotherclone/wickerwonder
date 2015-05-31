@@ -1,11 +1,17 @@
-.ui.inverted.blue.vertical.segment{:id=>'wicker_materials'}
+.ui.vertical.segment{:id=>'wicker_materials'}
   .ui.page.grid
-    .column
-      %h1{:id=>'wicker_materials'} Materials
+    .eight.wide.centered.column
+      %h1{:class=>'wckr materials heading-title'}  Materials
       - @materials.each do |m|
-        =m.name
-        =m.description.html_safe
-        -@downloads.each do |d|
-          -if(d.material_id==m.id)
-            %a{:href=> d.link}
-              = d.file
+        %h2{:class=>'wckr downloads heading-title'}
+          =m.name
+        .wckr.materials.rule
+          %hr
+        .wckr.materials.description
+          =m.description.html_safe
+        %ul{:class=>'wckr downloads linky'}
+          -@downloads.each do |d|
+            -if(d.material_id==m.id)
+              %li
+                %a{:href=> d.link}
+                  = d.file

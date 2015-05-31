@@ -1,3 +1,71 @@
-// Place all the styles related to the Materials controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "semantiglobalcoverides";
+@import "typography";
+@import "palette";
+@import "effects";
+@import "textures";
+
+.wckr.materials.heading-title{
+  @media (max-width:$tiny-mobile-max) {
+    @include wicker-segment-headings(40px, -1px 3px 6px rgba(180, 180, 180, .60), $white);
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    @include wicker-segment-headings(50px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @include wicker-segment-headings(60px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
+  }
+  @media (min-width: $computer-min) {
+    @include wicker-segment-headings();
+  }
+}
+
+.wckr.downloads.heading-title{
+  @media (max-width:$tiny-mobile-max) {
+    @include wicker-segment-headings(28px, -1px 3px 6px rgba(180, 180, 180, .60), $white);
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    @include wicker-segment-headings(35px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @include wicker-segment-headings(40px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
+  }
+  @media (min-width: $computer-min) {
+    @include wicker-segment-headings(45px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
+  }
+}
+
+.wckr.materials.rule{
+  text-align: center;
+  @include drop-shadow();
+  max-width: 80%;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wckr.materials.description{
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: justify;
+}
+
+.wckr.downloads.linky{
+  list-style: none;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  li{
+    width: 100%;
+    text-align: center;
+    a{
+      font-family: $sans;
+      font-size: 30px;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
