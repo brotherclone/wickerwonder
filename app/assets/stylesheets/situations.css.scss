@@ -6,23 +6,98 @@
 
 
 .wckr.situations.heading-title{
-  position: absolute;
   @media (max-width:$tiny-mobile-max) {
-    @include wicker-segment-headings(40px, -1px 3px 6px rgba(180, 180, 180, .60), $red);
+    @include wicker-segment-headings(40px, -1px 3px 6px rgba(180, 180, 180, .60), $white);
   }
   @media (min-width: $mobile-min) and (max-width: $mobile-max) {
-    @include wicker-segment-headings(50px, -1px 4px 5px rgba(180, 180, 180, .50), $red);
+    @include wicker-segment-headings(50px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
   }
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    @include wicker-segment-headings(60px, -1px 4px 5px rgba(180, 180, 180, .50), $red);
+    @include wicker-segment-headings(60px, -1px 4px 5px rgba(180, 180, 180, .50), $white);
   }
   @media (min-width: $computer-min) {
     @include wicker-segment-headings();
   }
 }
 
-.bleedy{
-  min-height: 400px;
-  background-size: cover;
-  background-repeat: no-repeat;
+#wicker_situations{
+  @include tri-bg();
+}
+
+.situation-img{
+  width:100%;
+  img{
+    width:100%;
+  }
+  @include box-shadow();
+}
+
+.situation-info{
+  @media (max-width:$tiny-mobile-max) {
+    background-color: transparentize($nearblack, 0.3);
+    @include inner-shadow();
+    padding: 10px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    background-color: transparentize($nearblack, 0.3);
+    @include inner-shadow();
+    padding: 10px;
+  }
+  @media (min-width: $tablet-min) {
+    margin-top: -60px;
+  }
+}
+.situation-name{
+  color: $white;
+  @include text-shadow();
+  font-family: $sans;
+  @media (max-width:$tiny-mobile-max) {
+    font-size: 24px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    font-size: 26px;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    margin-left: 20px;
+    position: relative;
+    top: -80px;
+    font-size: 28px;
+  }
+  @media (min-width: $computer-min)  {
+    margin-left: 30px;
+    position: relative;
+    top: -80px;
+    font-size: 30px;
+  }
+
+}
+
+.situation-description {
+  color: $white;
+  @media (max-width:$tiny-mobile-max) {
+    font-size: 12px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    font-size: 13px;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    background-color: transparentize($nearblack, 0.3);
+    @include inner-shadow();
+    width: 40%;
+    margin-left: 20px;
+    position: relative;
+    top: -80px;
+    padding: 10px;
+  }
+  @media (min-width: $computer-min) {
+    background-color: transparentize($nearblack, 0.3);
+    @include inner-shadow();
+    width: 40%;
+    margin-left: 30px;
+    position: relative;
+    top: -80px;
+    padding: 10px;
+  }
+
+
 }

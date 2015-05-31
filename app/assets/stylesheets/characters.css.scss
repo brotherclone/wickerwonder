@@ -4,13 +4,15 @@
 @import "effects";
 @import "semantiglobalcoverides";
 
+#wicker_characters{
+
+}
 .wckr.character.name{
   @include character-name();
   padding: 20px 0px 20px 10px;
 }
 
 .wckr.character.pairing{
-
   span{
     @include labeling(20px,$darkergrey,transparent);
   }

@@ -1,16 +1,24 @@
-.ui.inverted.vertical.segment{:id=>'wicker_welcome'}
+.ui.vertical.segment{:id=>'wicker_welcome'}
   .ui.page.grid
     .column
-      %img{:src=>image_path('wholegang.png'), :class=> 'wckr welcome-visual'}
-      %img{:src=>image_path('logo.png'), :class=>'wckr welcome-logo'}
-      .wckr.welcome.subtitle Transdimensional Barber
-      .wckr.welcome.msg
-        %p
-          Wicker Wonder is a concept for a animated series by
+      .wckr.welcome-visual-hold
+        %img{:src=>image_path('wholegang.png'), :class=> 'wckr welcome-visual'}
+      .wckr.welcome-logo-hold
+        %img{:src=>image_path('logo.png'), :class=>'wckr welcome-logo'}
+      .wckr.welcome-subtitle-hold
+        %h1{:class=>'wckr welcome-subtitle'}
+          Transdimensional Barber
+      .wckr.welcome-credit-hold
+        %p{:class=>'wckr welcome-credit'}
+          a concept for a animated series by
           %span{:itemscope => true, :itemtype =>'http://schema.org/Person'}
             %span{:itemprop => 'givenName'}
               Gabriel
             %span{:itemprop => 'familyName'}
-              Walsh
-          \.
+              Walsh.
+      .wckr.welcome-msg-hold
+        .wckr.welcome-msg
+          %p In the very distant future, people change their bodies into anything they wish. People can become animals, plants and machines. Other life forms and even objects can become human.
+          %p These fantastic transformations occur at places called body shops and are performed by the brilliant technicians known as barbers. And the most brilliant, legendary barber of all time is Wicker Wonder, Transdimensional Barber.
+
 

@@ -2,7 +2,7 @@
   text-shadow: $s;
 }
 
-@mixin box-shadow($s){
+@mixin box-shadow($s: 3px 3px 10px rgba(0,0,0,0.35)){
   -webkit-box-shadow: $s;
   -moz-box-shadow:    $s;
   box-shadow:         $s;

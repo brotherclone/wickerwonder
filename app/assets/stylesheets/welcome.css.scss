@@ -1,10 +1,177 @@
-.wckr.welcome-logo{
-  margin-left: auto;
-  margin-right: auto;
+@import "typography";
+@import "palette";
+@import "effects";
+@import "semantiglobalcoverides";
 
+#wicker_welcome{
+  background-color: $orange;
+}
+
+.wckr.welcome-visual-hold{
+  width: 100%;
+  text-align: center;
 }
 
 .wckr.welcome-visual{
-  margin-left: auto;
-  margin-right: auto;
+  @media (max-width:$tiny-mobile-max) {
+   max-height: 320px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    max-height: 400px;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    max-height: 550px;
+  }
+  @media (min-width: $computer-min) and (max-width: $computer-max) {
+    max-height: 550px;
+  }
+  @media (min-width: $large-monitor-min){
+    max-height: 600px;
+  }
+}
+
+
+.wckr.welcome-logo{
+  @media (max-width:$tiny-mobile-max) {
+   max-height: 55px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    max-height: 68px;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    max-height: 90px;
+  }
+  @media (min-width: $computer-min) and (max-width: $computer-max) {
+    max-height: 100px;
+  }
+  @media (min-width: $large-monitor-min) {
+    max-height: 110px;
+  }
+}
+
+.wckr.welcome-logo-hold{
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.wckr.welcome-subtitle-hold{
+  //@media (max-width:$tiny-mobile-max) {
+  //  border: 1px solid orange;
+  //}
+  //@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+  //  border: 1px solid green;
+  //}
+  //@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+  //  border: 1px solid purple;
+  //}
+  //@media (min-width: $computer-min) and (max-width: $computer-max) {
+  //  border: 1px solid red;
+  //}
+  //@media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
+  //  border: 1px solid blue;
+  //}
+  //@media (min-width: $wide-screen-min) {
+  //  border: 1px solid yellow;
+  //}
+}
+
+.wckr.welcome-subtitle{
+  @include text-shadow();
+  color: $white;
+  text-align: center;
+  @media (max-width:$tiny-mobile-max) {
+    font-size: 38px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    font-size: 46px;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    font-size: 58px;
+  }
+  @media (min-width: $computer-min) and (max-width: $computer-max) {
+    font-size: 58px;
+  }
+  @media (min-width: $large-monitor-min) {
+    font-size: 75px;
+  }
+}
+
+.wckr.welcome-credit{
+  font-family: $sans;
+  color: $white;
+  @media (max-width:$tiny-mobile-max) {
+    font-size: 22px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    font-size: 26px;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    font-size: 30px;
+  }
+  @media (min-width: $computer-min) and (max-width: $computer-max) {
+    font-size: 30px;
+  }
+  @media (min-width: $large-monitor-min) {
+    font-size: 35px;
+  }
+}
+
+.wckr.welcome-credit-hold{
+  text-align: center;
+  //@media (max-width:$tiny-mobile-max) {
+  //  border: 1px solid orange;
+  //}
+  //@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+  //  border: 1px solid green;
+  //}
+  //@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+  //  border: 1px solid purple;
+  //}
+  //@media (min-width: $computer-min) and (max-width: $computer-max) {
+  //  border: 1px solid red;
+  //}
+  //@media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
+  //  border: 1px solid blue;
+  //}
+  //@media (min-width: $wide-screen-min) {
+  //  border: 1px solid yellow;
+  //}
+}
+
+.wckr.welcome-msg{
+  color: $white;
+  text-align: justify;
+  @media (max-width:$tiny-mobile-max) {
+    font-size: 15px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $tablet-max) {
+    font-size: 16px;
+  }
+  @media (min-width: $computer-min) {
+    font-size: 18px;
+  }
+}
+
+.wckr.welcome-msg-hold{
+  text-align: center;
+  @media (max-width:$tiny-mobile-max) {
+    padding-top: 20px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    padding-top: 18px;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    padding-top: 16px;
+  }
+  @media (min-width: $computer-min) and (max-width: $computer-max) {
+    padding-top: 16px;
+  }
+  @media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
+    padding-top: 10px;
+  }
+  @media (min-width: $wide-screen-min) {
+    border: 1px solid yellow;
+  }
 }

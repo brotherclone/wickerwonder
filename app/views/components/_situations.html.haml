@@ -1,9 +1,14 @@
-
-%div{:id=>'wicker_situations'}
-  %h1{:class=>'wckr situations heading-title'} Situations
-  - @situations.each do |s|
-    .ui.vertical.segment.bleedy{:style=> 'background-image: url('+image_path('situations/'+s.situationimg)+')'}
-      .ui.page.grid
-        .column
-          =s.name
-          =s.description.html_safe
+.ui.vertical.segment{:id=>'wicker_situations'}
+  .ui.page.grid
+    .column
+      %h1{:class=>'wckr situations heading-title'} Situations
+      .see-the-situations
+        - @situations.each do |s|
+          .see-the-situation
+            .situation-img
+              %img{:src=>image_path('situations/'+s.situationimg)}
+            .situation-info
+              .situation-name
+                =s.name
+              .situation-description
+                =s.description.html_safe

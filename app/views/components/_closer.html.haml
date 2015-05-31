@@ -1,14 +1,16 @@
-.ui.inverted.red.vertical.segment{:id=>'wicker_info'}
+.ui.vertical.segment{:id=>'wicker_info'}
   .ui.page.grid
-    .column
+    .eight.wide.centered.column
+      .sign-up-please
+        %h1 Please sign up!
+        %p ...to get email updates on Wicker Wonder, Transdimensional Barber.
       #mc_embed_signup
         %form{:action=>'//foundation.us9.list-manage.com/subscribe/post?u=70e05a0c99eb9c1ac9d0b7dbd&amp;id=57428c3d5d', :method=>'post', :id=>'mc-embedded-subscribe-form', :name=>'mc-embedded-subscribe-form', :class=>'ui form', :target=>'_blank', :data=>{:novalidate=> true}}
           #mc_embed_signup_scroll
             %div{:class=>'mc-field-group field'}
-              %label{:for=>'mce-EMAIL'} Email Address
-              %input{:type=>'email', :value=>'', :name=>'EMAIL', :class=>'required email', :id=>'mce-EMAIL'}
+              %input{:type=>'email', :value=>'', :name=>'EMAIL', :class=>'required email', :id=>'mce-EMAIL', :placeholder=>'put your email here'}
             #mce-responses{:class=>'clear'}
               #mce-error-response{:class=>'response ui error message',:style=>'display:none'}
               #mce-success-response{:class=>'response ui success message',:style=>'display:none'}
-            .clear
+            .wckr.sign-up-submit
               %input{:type=>'submit', :value=>'Subscribe', :class=>'ui submit button'}

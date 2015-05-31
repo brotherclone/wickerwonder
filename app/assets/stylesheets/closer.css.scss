@@ -1,0 +1,57 @@
+@import "palette";
+@import "effects";
+@import "semantiglobalcoverides";
+@import "typography";
+@import "textures";
+
+
+.wckr.sign-up-submit{
+  width: 100%;
+  text-align: center;
+}
+
+.sign-up-please{
+
+  h1{
+    text-align: center;
+    color: $white;
+    @media (max-width:$tiny-mobile-max) {
+      font-size: 30px;
+    }
+    @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+      font-size: 42px;
+    }
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: 60px;
+    }
+    @media (min-width: $computer-min)  {
+      font-size: 70px;
+    }
+
+  }
+  p{
+    color: $darkgrey;
+    text-align: center;
+    margin: -10px 20px 10px 20px;
+    margin-bottom: 10px;
+    @media (max-width:$tiny-mobile-max) {
+      display: none;
+    }
+    @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+      font-size: 13px;
+    }
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: 15px;
+    }
+    @media (min-width: $computer-min) and (max-width: $computer-max) {
+      font-size: 16px;
+    }
+    @media (min-width: $large-monitor-min)  {
+      font-size: 22px;
+    }
+  }
+}
+
+#wicker_info{
+  background-color: $wickergreen;
+}

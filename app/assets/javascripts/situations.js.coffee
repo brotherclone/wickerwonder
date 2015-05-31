@@ -1,2 +1,2 @@
 $ ->
-  $('.see-situations').slick();
+  $('.see-the-situations').slick();
