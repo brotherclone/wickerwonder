@@ -11,7 +11,6 @@
 }
 
 .sign-up-please{
-
   h1{
     text-align: center;
     color: $white;
@@ -27,7 +26,6 @@
     @media (min-width: $computer-min)  {
       font-size: 70px;
     }
-
   }
   p{
     color: $darkgrey;
@@ -54,4 +52,22 @@
 
 #wicker_info{
   background-color: $wickergreen;
+  @media (max-width:$tiny-mobile-max) {
+    border: 1px solid orange;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    border: 1px solid green;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    border: 1px solid purple;
+  }
+  @media (min-width: $computer-min) and (max-width: $computer-max) {
+    border: 1px solid red;
+  }
+  @media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
+    border: 1px solid blue;
+  }
+  @media (min-width: $wide-screen-min) {
+    border: 1px solid yellow;
+  }
 }

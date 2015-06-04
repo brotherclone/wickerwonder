@@ -16,7 +16,6 @@ gem 'tinymce-rails'
 gem 'rails-assets-semantic'
 gem 'rails-assets-slick.js'
 
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'thor'

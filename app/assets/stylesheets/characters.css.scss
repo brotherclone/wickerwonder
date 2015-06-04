@@ -5,7 +5,24 @@
 @import "semantiglobalcoverides";
 
 #wicker_characters{
-
+  @media (max-width:$tiny-mobile-max) {
+    border: 1px solid orange;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    border: 1px solid green;
+  }
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    border: 1px solid purple;
+  }
+  @media (min-width: $computer-min) and (max-width: $computer-max) {
+    border: 1px solid red;
+  }
+  @media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
+    border: 1px solid blue;
+  }
+  @media (min-width: $wide-screen-min) {
+    border: 1px solid yellow;
+  }
 }
 .wckr.character.name{
   @include character-name();

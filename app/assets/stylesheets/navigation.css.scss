@@ -7,6 +7,9 @@
 #trigger{
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
+  position: fixed;
+  z-index: 500;
+  background-color: transparent;
 }
 
 #sidenav{
