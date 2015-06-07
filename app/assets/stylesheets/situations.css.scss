@@ -6,6 +6,7 @@
 
 
 .wckr.situations.heading-title{
+  transition: color 3s ease-in-out 0s;
   @media (max-width:$tiny-mobile-max) {
     @include wicker-segment-headings(40px, -1px 3px 6px rgba(180, 180, 180, .60), $white);
   }
@@ -20,25 +21,26 @@
   }
 }
 
+.wckr.situations.heading-title.first-pos{
+  color: $blue;
+}
+
 #wicker_situations{
   @include tri-bg();
   @media (max-width:$tiny-mobile-max) {
-    border: 1px solid orange;
+    height: 500px;
   }
   @media (min-width: $mobile-min) and (max-width: $mobile-max) {
-    border: 1px solid green;
+    height: 700px;
   }
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    border: 1px solid purple;
+    height: 750px;
   }
   @media (min-width: $computer-min) and (max-width: $computer-max) {
-    border: 1px solid red;
+    height: 800px;
   }
-  @media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
-    border: 1px solid blue;
-  }
-  @media (min-width: $wide-screen-min) {
-    border: 1px solid yellow;
+  @media (min-width: $large-monitor-min) {
+    height: 820px;
   }
 }
 
@@ -78,13 +80,13 @@
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
     margin-left: 20px;
     position: relative;
-    top: -80px;
+    top: -110px;
     font-size: 28px;
   }
   @media (min-width: $computer-min)  {
     margin-left: 30px;
     position: relative;
-    top: -80px;
+    top: -115px;
     font-size: 30px;
   }
 
@@ -104,7 +106,7 @@
     width: 40%;
     margin-left: 20px;
     position: relative;
-    top: -80px;
+    top: -110px;
     padding: 10px;
   }
   @media (min-width: $computer-min) {
@@ -113,7 +115,7 @@
     width: 40%;
     margin-left: 30px;
     position: relative;
-    top: -80px;
+    top: -115px;
     padding: 10px;
   }
 

@@ -4,25 +4,25 @@
 @import "semantiglobalcoverides";
 
 #wicker_welcome{
-  background-color: $orange;
+  transition: background-color 1s ease-in-out 0s;
+  background-color: $purple;
+  margin-top: 0px;
   @media (max-width:$tiny-mobile-max) {
-    border: 1px solid orange;
+    height: 720px;
   }
   @media (min-width: $mobile-min) and (max-width: $mobile-max) {
-    border: 1px solid green;
+    height: 800px;
   }
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    border: 1px solid purple;
+    height: 980px;
   }
   @media (min-width: $computer-min) and (max-width: $computer-max) {
-    border: 1px solid red;
+    height: 1000px;
   }
-  @media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
-    border: 1px solid blue;
+  @media (min-width: $large-monitor-min) {
+    height: 1100px;
   }
-  @media (min-width: $wide-screen-min) {
-    border: 1px solid yellow;
-  }
+
 }
 
 .wckr.welcome-visual-hold{
@@ -67,37 +67,34 @@
   }
 }
 
+#wicker_welcome.spotlight {
+  background-color: $orange;
+}
+
 .wckr.welcome-logo-hold{
+  transition: margin-top 1s ease-in-out 0s;
   width: 100%;
   text-align: center;
 }
 
+.wckr.welcome-logo-hold.first-pos{
+  @media (max-width:$tiny-mobile-max) {
+    margin-top:  -40px;
+  }
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    margin-top:  -140px;
+  }
+  @media (min-width: $tablet-min) {
+    margin-top: -250px;
+  }
 
-
-.wckr.welcome-subtitle-hold{
-  //@media (max-width:$tiny-mobile-max) {
-  //  border: 1px solid orange;
-  //}
-  //@media (min-width: $mobile-min) and (max-width: $mobile-max) {
-  //  border: 1px solid green;
-  //}
-  //@media (min-width: $tablet-min) and (max-width: $tablet-max) {
-  //  border: 1px solid purple;
-  //}
-  //@media (min-width: $computer-min) and (max-width: $computer-max) {
-  //  border: 1px solid red;
-  //}
-  //@media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
-  //  border: 1px solid blue;
-  //}
-  //@media (min-width: $wide-screen-min) {
-  //  border: 1px solid yellow;
-  //}
 }
 
+
 .wckr.welcome-subtitle{
+  transition: color 1.25s ease-in-out 0s;
   @include text-shadow();
-  color: $white;
+  color: darken($white, 12%);
   text-align: center;
   @media (max-width:$tiny-mobile-max) {
     font-size: 38px;
@@ -114,6 +111,10 @@
   @media (min-width: $large-monitor-min) {
     font-size: 75px;
   }
+}
+
+.wckr.welcome-subtitle.first-pos{
+  color: $white;
 }
 
 .wckr.welcome-credit{
@@ -134,28 +135,25 @@
   @media (min-width: $large-monitor-min) {
     font-size: 35px;
   }
+
+}
+
+.wckr.welcome-credit-hold.first-pos{
+  @media (min-width: $mobile-min) {
+    opacity: 0;
+  }
 }
 
 .wckr.welcome-credit-hold{
+  transition: all 1.5s ease-in-out 0.5s;
   text-align: center;
-  //@media (max-width:$tiny-mobile-max) {
-  //  border: 1px solid orange;
-  //}
-  //@media (min-width: $mobile-min) and (max-width: $mobile-max) {
-  //  border: 1px solid green;
-  //}
-  //@media (min-width: $tablet-min) and (max-width: $tablet-max) {
-  //  border: 1px solid purple;
-  //}
-  //@media (min-width: $computer-min) and (max-width: $computer-max) {
-  //  border: 1px solid red;
-  //}
-  //@media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
-  //  border: 1px solid blue;
-  //}
-  //@media (min-width: $wide-screen-min) {
-  //  border: 1px solid yellow;
-  //}
+  a{
+    color: $wickergreen;
+    &:hover{
+      color: $white;
+    }
+  }
+  opacity: 1;
 }
 
 .wckr.welcome-msg{
@@ -172,10 +170,18 @@
   }
 }
 
+.wckr.welcome-msg-hold.first-pos{
+  @media (min-width: $mobile-min) {
+    opacity: 0;
+  }
+}
+
 .wckr.welcome-msg-hold{
+  transition: opacity 2s ease-in-out 0.25s;
   text-align: center;
+  opacity: 1;
   @media (max-width:$tiny-mobile-max) {
-    padding-top: 20px;
+    padding-top: 16px;
   }
   @media (min-width: $mobile-min) and (max-width: $mobile-max) {
     padding-top: 18px;
@@ -186,10 +192,8 @@
   @media (min-width: $computer-min) and (max-width: $computer-max) {
     padding-top: 16px;
   }
-  @media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
-    padding-top: 10px;
+  @media (min-width: $large-monitor-min) {
+    padding-top: 13px;
   }
-  @media (min-width: $wide-screen-min) {
-    border: 1px solid yellow;
-  }
+
 }

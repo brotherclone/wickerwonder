@@ -6,22 +6,19 @@
 
 #wicker_characters{
   @media (max-width:$tiny-mobile-max) {
-    border: 1px solid orange;
+    height: 450px;
   }
   @media (min-width: $mobile-min) and (max-width: $mobile-max) {
-    border: 1px solid green;
+    height: 490px;
   }
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    border: 1px solid purple;
+    height: 550px;
   }
   @media (min-width: $computer-min) and (max-width: $computer-max) {
-    border: 1px solid red;
+    height: 700px;
   }
-  @media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
-    border: 1px solid blue;
-  }
-  @media (min-width: $wide-screen-min) {
-    border: 1px solid yellow;
+  @media (min-width: $large-monitor-min) {
+    height: 800px;
   }
 }
 .wckr.character.name{
@@ -50,6 +47,7 @@
 }
 
 .wckr.strata.heading-title{
+  transition: color 3s ease-in-out 0s;
   @media (max-width:$tiny-mobile-max) {
     @include wicker-segment-headings(40px, -1px 3px 6px rgba(180, 180, 180, .60), $white);
     margin-bottom: 20px;
@@ -63,6 +61,10 @@
   @media (min-width: $computer-min) {
     @include wicker-segment-headings();
   }
+}
+
+.wckr.strata.heading-title.first-pos{
+  color: $blue
 }
 
 .meet-the-characters{

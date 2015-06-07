@@ -56,3 +56,19 @@ $wide-screen-min: 1920px;
     border: 1px solid yellow;
   }
 }
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}

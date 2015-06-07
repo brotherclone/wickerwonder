@@ -1,8 +1,8 @@
 .ui.vertical.segment{:id=>'wicker_situations'}
   .ui.page.grid
     .column
-      %h1{:class=>'wckr situations heading-title'} Situations
-      .see-the-situations
+      %h1{:class=>'wckr situations heading-title first-pos', :id=>'situations-title'} Situations
+      .see-the-situations{:id=>'situations-slider'}
         - @situations.each do |s|
           .see-the-situation
             .situation-img
