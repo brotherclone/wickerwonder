@@ -7,16 +7,11 @@ describe 'The Situations Component is working', :type => :feature do
   end
 
   it 'checks a situation slide', :js => true  do
-
+    Situation.all.each do |s|
+      expect(page).to have_content s.name
+      expect(page).to have_css("img[src*='"+s.situationimg+"']")
+      expect(page).to have_content s.description
+    end
   end
-
-  it 'checks next slider', :js => true  do
-
-  end
-
-  it 'checks prev slider', :js => true  do
-
-  end
-
 
 end

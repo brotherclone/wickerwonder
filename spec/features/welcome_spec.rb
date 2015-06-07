@@ -7,11 +7,11 @@ describe 'Welcome Component is working', :type => :feature do
   end
 
   it 'checks for large image', :js => true  do
-    page.should have_css('img', text: 'wholegang.png')
+    expect(page).to have_css("img[src*='wholegang.png']")
   end
 
   it 'checks for logo image', :js => true  do
-
+    expect(page).to have_css("img[src*='logo.png']")
   end
 
   it 'checks for subtitle and information', :js => true  do
@@ -19,8 +19,7 @@ describe 'Welcome Component is working', :type => :feature do
   end
 
   it 'checks for creator formatting and links', :js => true  do
-
+    expect(page).to have_link('Gabriel Walsh', href:'http://www.imaginary.foundation/gabrielwalsh')
   end
-
 
 end
