@@ -16,4 +16,5 @@
 //= require semantic
 //= require tinymce-jquery
 //= require slick.js
+//= require jquery-smooth-scroll
 //= require_tree .

@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem 'tinymce-rails'
 gem 'rails-assets-semantic'
 gem 'rails-assets-slick.js'
+gem 'rails-assets-jquery-smooth-scroll'
 
 group :development, :test do
   gem 'rspec-rails'
