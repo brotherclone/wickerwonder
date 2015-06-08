@@ -73,6 +73,8 @@
 
 .wckr.welcome-logo-hold{
   transition: margin-top 1s ease-in-out 0s;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
   width: 100%;
   text-align: center;
 }
