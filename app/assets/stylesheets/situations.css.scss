@@ -68,7 +68,6 @@
   }
 }
 .situation-name{
-  color: $white;
   @include text-shadow();
   font-family: $sans;
   @media (max-width:$tiny-mobile-max) {
@@ -89,7 +88,14 @@
     top: -115px;
     font-size: 30px;
   }
+}
 
+.situation-name.dark{
+  color: $darkgrey;
+}
+
+.situation-name.light{
+  color: $white;
 }
 
 .situation-description {

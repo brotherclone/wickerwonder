@@ -8,7 +8,7 @@
             .situation-img
               %img{:src=>image_path('situations/'+s.situationimg)}
             .situation-info
-              .situation-name
+              .situation-name{:class=> s.headingcolor}
                 =s.name
               .situation-description
                 =s.description.html_safe

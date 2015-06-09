@@ -13,9 +13,9 @@ $slick-prev-character: "←" !default;
 $slick-next-character: "→" !default;
 $slick-dot-character: "•" !default;
 $slick-dot-size: 6px !default;
-$slick-opacity-default: 0.25 !default;
-$slick-opacity-on-hover: 0.5 !default;
-$slick-opacity-not-active: 0.15 !default;
+$slick-opacity-default: 0.85 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
 
 @function slick-image-url($url) {
     @if function-exists(image-url) {
@@ -59,6 +59,7 @@ $slick-opacity-not-active: 0.15 !default;
 .slick-prev,
 .slick-next {
     @include text-shadow(-1px 3px 5px rgba(180, 180, 180, .75));
+    transition: color 1s ease-in-out 0s;
     position: absolute;
     display: block;
     height: 20px;
