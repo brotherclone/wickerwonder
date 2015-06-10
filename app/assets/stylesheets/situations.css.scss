@@ -98,6 +98,14 @@
   color: $white;
 }
 
+.situation-name.yellow{
+  color: $yellow;
+}
+
+.situation-name.blue{
+  color: $blue;
+}
+
 .situation-description {
   color: $white;
   @media (max-width:$tiny-mobile-max) {
