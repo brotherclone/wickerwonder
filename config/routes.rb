@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   get 'soon', to:'comingsoon#index'
   get 'home', to:'wicker#index'
 
-  if Rails.env.production?
-    root 'comingsoon#index'
-  else
-    root 'wicker#index'
-  end
-
+  # if Rails.env.production?
+  #   root 'comingsoon#index'
+  # else
+  #   root 'wicker#index'
+  # end
+  root 'wicker#index'
 end
