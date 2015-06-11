@@ -1,8 +1,8 @@
 .ui.vertical.segment{:id=>'wicker_characters'}
   .ui.page.grid
     .column
-      %h1{:class=>'wckr strata heading-title'} Meet the Characters
-      .meet-the-characters
+      %h1{:class=>'wckr strata heading-title first-pos', :id=>'characters-title'} Meet the Characters
+      .meet-the-characters{:id=>'characters-slider'}
         - @characters.each do |c|
           .meet-the-character
             .character-info

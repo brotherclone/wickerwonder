@@ -4,9 +4,14 @@
 .ui.grid
   .ui.three.wide.column
     .ui.row
-      %strong Name:
-      %span
-        =@situation.name
+      %div
+        %strong Name:
+        %span
+          =@situation.name
+      %div
+        %strong Color:
+        %span
+          =@situation.headingcolor
   .ui.five.wide.column
     .ui.row
       %strong Description:

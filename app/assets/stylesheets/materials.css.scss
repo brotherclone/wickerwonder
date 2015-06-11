@@ -6,22 +6,19 @@
 
 #wicker_materials{
   @media (max-width:$tiny-mobile-max) {
-    border: 1px solid orange;
+    height: 1000px;
   }
   @media (min-width: $mobile-min) and (max-width: $mobile-max) {
-    border: 1px solid green;
+    height: 1000px;
   }
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    border: 1px solid purple;
+    height: 950px;
   }
   @media (min-width: $computer-min) and (max-width: $computer-max) {
-    border: 1px solid red;
+    height: 980px;
   }
-  @media (min-width: $large-monitor-min) and (max-width: $large-monitor-max) {
-    border: 1px solid blue;
-  }
-  @media (min-width: $wide-screen-min) {
-    border: 1px solid yellow;
+  @media (min-width: $large-monitor-min) {
+    height: 980px;
   }
 }
 

@@ -13,5 +13,5 @@
           -@downloads.each do |d|
             -if(d.material_id==m.id)
               %li
-                %a{:href=> d.link}
+                %a{:href=> image_path('downloads/'+d.link)}
                   = d.file

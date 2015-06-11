@@ -1,14 +1,14 @@
 .ui.vertical.segment{:id=>'wicker_situations'}
   .ui.page.grid
     .column
-      %h1{:class=>'wckr situations heading-title'} Situations
-      .see-the-situations
+      %h1{:class=>'wckr situations heading-title first-pos', :id=>'situations-title'} Situations
+      .see-the-situations{:id=>'situations-slider'}
         - @situations.each do |s|
           .see-the-situation
             .situation-img
               %img{:src=>image_path('situations/'+s.situationimg)}
             .situation-info
-              .situation-name
+              %div{:class=> 'situation-name '+ s.headingcolor}
                 =s.name
               .situation-description
                 =s.description.html_safe

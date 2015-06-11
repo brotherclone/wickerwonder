@@ -10,6 +10,16 @@
     = f.text_field :name
     = f.label :situationimg
     = f.text_field :situationimg
+    = f.label :headingcolor
+    = f.radio_button :headingcolor, 'light', :checked=> true
+    = label :headingcolor, 'Light'
+    = f.radio_button :headingcolor, 'dark'
+    = label :headingcolor, 'Dark'
+    = f.radio_button :headingcolor, 'yellow'
+    = label :headingcolor, 'Yellow'
+    = f.radio_button :headingcolor, 'blue'
+    = label :headingcolor, 'Blue'
+    %br
     = f.label :description
     = f.text_area :description, :class => 'tinymce', :rows => 40, :cols => 120
     .ui.grid
