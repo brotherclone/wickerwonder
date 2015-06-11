@@ -81,17 +81,25 @@
     position: relative;
     top: -110px;
     font-size: 28px;
+    background-color: transparentize($nearblack, 0.3);
+    @include inner-shadow();
+    width: 40%;
+    padding: 10px;
   }
   @media (min-width: $computer-min)  {
     margin-left: 30px;
     position: relative;
     top: -115px;
     font-size: 30px;
+    background-color: transparentize($nearblack, 0.3);
+    @include inner-shadow();
+    width: 40%;
+    padding: 10px;
   }
 }
 
 .situation-name.dark{
-  color: $darkgrey;
+  color: $purple;
 }
 
 .situation-name.light{
