@@ -2,7 +2,7 @@ ruby '2.1.2'
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.9'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -25,6 +25,7 @@ group :development, :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'table_print'
+  gem 'rake'
 end
 
 group :doc do
