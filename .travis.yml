@@ -1,4 +1,14 @@
 language: ruby
 rvm:
  - 2.1.2
- sudo: required
+sudo: required
+
+before_install:
+  - gem install bundler
+
+install:
+  - bundle install
+
+script:
+  - RAILS_ENV=test bundle exec rake db:create db:migrate
+  - bundle exec rake db:test:prepare
